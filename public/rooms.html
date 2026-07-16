@@ -40,9 +40,8 @@
   <link rel="icon" href="images/2024/09/cropped-favico-villa-1.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=8">
-  <script defer src="js/main.js?v=2"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&family=Saira+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/lux.css?v=1">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -50,469 +49,289 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;"><img src="images/2023/04/VILLA-AZURE-WHITE-550x228.png" alt="Villa Azure Hotel"><span style="font-family:var(--font-body);font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold-light);font-weight:600;border-left:1px solid rgba(255,255,255,0.4);padding-left:12px;">Hotel</span></a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">The Hotel</a>
-        <a href="rooms.html" class="active">Suites</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="amenities.html">Amenities</a>
-        <a href="weddings.html">Weddings</a>
-        <a href="corporate.html">Corporate</a>
-        <a href="es/rooms.html" class="nav-cta" style="letter-spacing:0.06em;" title="Español">ES</a>
-        <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="nav-cta">Reserve Your Stay</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
+  <!-- Header -->
+  <header class="lux-header" id="luxHeader">
+    <button class="burger" id="menuOpen" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="lux-logo"><img src="images/2023/04/VILLA-AZURE-WHITE-1024x425.png" alt="Villa Azure Hotel"><span class="tag">Hotel · Ocean Park</span></a>
+    <div class="hdr-right"><a class="lang-toggle" href="es/rooms.html">ES</a><a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="pill light">Book</a></div>
   </header>
 
-  <section class="page-hero">
-    <div class="hero-bg" style="background-image: url('images/2024/12/Exclusive-Villa-34.webp')"></div>
-    <div class="page-hero-content">
-      <span class="section-label">Rooms &amp; Suites</span>
-      <h1>Exceptional Comfort and Calm Relaxation</h1>
-      <p>Villa Azure Hotel, where you can immerse yourself in a serene and rejuvenating experience.</p>
+  <!-- Menu overlay -->
+  <div class="menu" id="menu">
+    <button class="close" id="menuClose">Close</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">The Hotel</a>
+      <a href="rooms.html">Suites</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="amenities.html">Amenities</a>
+      <a href="weddings.html">Weddings</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="foot">
+      <a href="es/rooms.html">Español</a>
+      <a href="tel:+15612892565">561-289-2565</a>
+      <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener">Reserve</a>
     </div>
-  </section>
+  </div>
 
-  <!-- Intro -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center fade-up" style="max-width: 920px; margin: 0 auto;">
-        <span class="section-label">Check In: 4:00 pm &middot; Check Out: 10:00 am</span>
-        <h2 class="section-title">Villa Azure Hotel, where you can immerse yourself in a serene and rejuvenating experience.</h2>
-        <div class="gold-line" style="margin-left:auto;margin-right:auto"></div>
-        <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.8; margin-top: 20px;">
-          Experience the ultimate in comfort and luxury at Villa Azure Hotel. We offer sixteen exquisite suites, each with its own private bathroom featuring rain showers and soaking tubs, high-definition smart TVs, high-speed Wi-Fi, a curated minibar, and a Nespresso coffee machine to ensure your convenience.
-        </p>
-        <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.8; margin-top: 16px;">
-          Our rooms are thoughtfully designed with modern amenities and a Caribbean touch, showcasing luxurious linens and bespoke furnishings. When you stay with us, you&rsquo;ll have access to our stunning pool and communal areas, enhancing your overall experience. Villa Azure Hotel is more than just a place to stay; it&rsquo;s an invitation to relax, explore, and create lasting memories in the heart of San Juan.
-        </p>
+  <!-- Page hero -->
+  <section class="page-hero">
+    <img src="images/2024/12/Exclusive-Villa-34.webp" alt="">
+    <div class="wrap">
+      <div class="page-hero-in">
+        <span class="lbl">Rooms &amp; Suites</span>
+        <h1>Exceptional Comfort and Calm Relaxation</h1>
+        <p>Sixteen ocean-view suites, sleeping up to 32.</p>
       </div>
     </div>
   </section>
 
-  <!-- Rooms Grid -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="rooms-grid">
+  <!-- Suites -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="center-head reveal">
+        <span class="lbl">Check In: 4:00 pm &middot; Check Out: 10:00 am</span>
+        <h2>Villa Azure Hotel, where you can immerse yourself in a serene and rejuvenating experience.</h2>
+        <div class="rule"></div>
+        <p>Experience the ultimate in comfort and luxury at Villa Azure Hotel. We offer sixteen exquisite suites, each with its own private bathroom featuring rain showers and soaking tubs, high-definition smart TVs, high-speed Wi-Fi, a curated minibar, and a Nespresso coffee machine to ensure your convenience.</p>
+        <p>Our rooms are thoughtfully designed with modern amenities and a Caribbean touch, showcasing luxurious linens and bespoke furnishings. When you stay with us, you&rsquo;ll have access to our stunning pool and communal areas, enhancing your overall experience. Villa Azure Hotel is more than just a place to stay; it&rsquo;s an invitation to relax, explore, and create lasting memories in the heart of San Juan.</p>
+      </div>
+
+      <div class="suite-grid">
 
         <!-- 1. Luxury Suite -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Suite</span>
-            <div class="rg-track">
-              <img src="images/2024/12/Exclusive-Villa-34.webp" alt="Luxury Suite" loading="lazy">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-3.webp" alt="Luxury Suite – pool view" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-41.webp" alt="Luxury Suite – bedroom" loading="lazy">
-              <img src="images/2024/10/Deluxe-Double-Room-10.webp" alt="Luxury Suite – second bedroom" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Luxury Suite</h3>
-            <p>This spacious ground floor accommodation sleeps 4 guests and features two bedrooms: one with a King bed and the other with two Queen beds. Enjoy a relaxing pool view from your room, making it an ideal choice for families or groups seeking comfort and convenience during their stay.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King + 2 Queen</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Up to 4</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> 2 Bathrooms</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Suite</span><img src="images/2024/12/Exclusive-Villa-34.webp" alt="Luxury Suite"></div>
+          <h3>Luxury Suite</h3>
+          <div class="feat"><span>1 King + 2 Queen</span><span>Up to 4</span><span>2 Bathrooms</span></div>
+          <p>This spacious ground floor accommodation sleeps 4 guests and features two bedrooms: one with a King bed and the other with two Queen beds. Enjoy a relaxing pool view from your room, making it an ideal choice for families or groups seeking comfort and convenience during their stay.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 3. Panoramic Ocean Suite -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Ocean View</span>
-            <div class="rg-track">
-              <img src="images/2024/10/Grand-Room-7.webp" alt="Panoramic Ocean Suite terrace" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-30.webp" alt="Panoramic Villa living room" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-9.webp" alt="Panoramic Villa bedroom" loading="lazy">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-6.webp" alt="Panoramic Villa second bedroom" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-40.webp" alt="Panoramic Villa interior" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Panoramic Ocean Suite</h3>
-            <p>This beautiful suite sleeps 8 guests and boasts stunning ocean views. It includes 2 King beds and 2 Queen beds for a restful stay, along with a terrace to enjoy the scenic surroundings and refreshing sea breeze&mdash;ideal for families or groups seeking a relaxing ocean getaway.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 2 King + 2 Queen</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Up to 8</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> 3 Bathrooms</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 2. Panoramic Ocean Suite -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Ocean View</span><img src="images/2024/10/Grand-Room-7.webp" alt="Panoramic Ocean Suite"></div>
+          <h3>Panoramic Ocean Suite</h3>
+          <div class="feat"><span>2 King + 2 Queen</span><span>Up to 8</span><span>3 Bathrooms</span></div>
+          <p>This beautiful suite sleeps 8 guests and boasts stunning ocean views. It includes 2 King beds and 2 Queen beds for a restful stay, along with a terrace to enjoy the scenic surroundings and refreshing sea breeze&mdash;ideal for families or groups seeking a relaxing ocean getaway.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 5. Premium Room -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Ground Floor</span>
-            <div class="rg-track">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-2.webp" alt="Premium Room" loading="lazy">
-              <img src="images/2024/10/Premium-Room-3.webp" alt="Premium Room king bed" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-45.webp" alt="Premium Room interior" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Premium Room, 1 King Bed, Ground Floor</h3>
-            <p>This cozy accommodation sleeps 2 guests and offers a stunning city view. It features a comfortable King bed, making it perfect for a romantic getaway or a solo retreat in the heart of the city.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King Bed</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> City View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 3. Premium Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Ground Floor</span><img src="images/2025/02/FOTO-VILLA-AZUR-2.webp" alt="Premium Room, 1 King Bed, Ground Floor"></div>
+          <h3>Premium Room, 1 King Bed, Ground Floor</h3>
+          <div class="feat"><span>1 King Bed</span><span>2 Guests</span><span>City View</span></div>
+          <p>This cozy accommodation sleeps 2 guests and offers a stunning city view. It features a comfortable King bed, making it perfect for a romantic getaway or a solo retreat in the heart of the city.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 6. Luxury Room, Pool View, Ground Floor -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Pool View</span>
-            <div class="rg-track">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-3.webp" alt="Luxury Room pool view" loading="lazy">
-              <img src="images/2024/10/Luxury-RoomOne-3.webp" alt="Luxury Room interior" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-16.webp" alt="Luxury Room king bed" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-42.webp" alt="Luxury Room detail" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-48.webp" alt="Luxury Room view" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Luxury Room, 1 King Bed, Pool View, Ground Floor</h3>
-            <p>This charming accommodation sleeps 2 guests and features a comfortable King bed with a lovely pool view. It&rsquo;s an ideal spot for a relaxing getaway or a romantic escape.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King Bed</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ground Floor</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 4. Luxury Room, Pool View, Ground Floor -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Pool View</span><img src="images/2025/02/FOTO-VILLA-AZUR-3.webp" alt="Luxury Room, 1 King Bed, Pool View, Ground Floor"></div>
+          <h3>Luxury Room, 1 King Bed, Pool View, Ground Floor</h3>
+          <div class="feat"><span>1 King Bed</span><span>2 Guests</span><span>Ground Floor</span></div>
+          <p>This charming accommodation sleeps 2 guests and features a comfortable King bed with a lovely pool view. It&rsquo;s an ideal spot for a relaxing getaway or a romantic escape.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 7. Luxury Room, Connecting Rooms, Pool View -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Connecting</span>
-            <div class="rg-track">
-              <img src="images/2024/12/Exclusive-Villa-8.webp" alt="Luxury Room connecting" loading="lazy">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-3.webp" alt="Luxury Room pool view" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-7.webp" alt="Luxury Room king bed" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-41.webp" alt="Luxury Room detail" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Luxury Room, 1 King Bed, Connecting Rooms, Pool View</h3>
-            <p>This delightful accommodation sleeps 2 guests and features a comfortable King bed in connecting rooms, offering a beautiful pool view. It&rsquo;s perfect for couples or small families seeking a relaxing getaway.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King Bed</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Pool View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 5. Luxury Room, Connecting Rooms, Pool View -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Connecting</span><img src="images/2024/12/Exclusive-Villa-8.webp" alt="Luxury Room, 1 King Bed, Connecting Rooms, Pool View"></div>
+          <h3>Luxury Room, 1 King Bed, Connecting Rooms, Pool View</h3>
+          <div class="feat"><span>1 King Bed</span><span>2 Guests</span><span>Pool View</span></div>
+          <p>This delightful accommodation sleeps 2 guests and features a comfortable King bed in connecting rooms, offering a beautiful pool view. It&rsquo;s perfect for couples or small families seeking a relaxing getaway.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 8. Deluxe Double Room -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Courtyard</span>
-            <div class="rg-track">
-              <img src="images/2024/12/Exclusive-Villa-26.webp" alt="Deluxe Double Room" loading="lazy">
-              <img src="images/2024/12/FOTO-VILLA-AZUR-5.webp" alt="Deluxe Double Room interior" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-43.webp" alt="Deluxe Double Room courtyard" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Deluxe Double Room, 2 Queen Beds, Courtyard View, Ground Floor</h3>
-            <p>This room sleeps 2 guests and features two comfortable Queen beds with a charming courtyard view, making it an inviting space to unwind on the ground floor.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 2 Queen Beds</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ground Floor</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 6. Deluxe Double Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Courtyard</span><img src="images/2024/12/Exclusive-Villa-26.webp" alt="Deluxe Double Room, 2 Queen Beds, Courtyard View, Ground Floor"></div>
+          <h3>Deluxe Double Room, 2 Queen Beds, Courtyard View, Ground Floor</h3>
+          <div class="feat"><span>2 Queen Beds</span><span>2 Guests</span><span>Ground Floor</span></div>
+          <p>This room sleeps 2 guests and features two comfortable Queen beds with a charming courtyard view, making it an inviting space to unwind on the ground floor.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 9. Comfort Room, 1 King Bed -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">Room</span>
-            <div class="rg-track">
-              <img src="images/2024/12/Exclusive-Villa-21.webp" alt="Comfort Room" loading="lazy">
-              <img src="images/2024/10/Comfort-Room-3.webp" alt="Comfort Room king bed" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-46.webp" alt="Comfort Room interior" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Comfort Room, 1 King Bed</h3>
-            <p>This stylish room sleeps 2 guests and features a luxurious King bed with stunning city views, perfect for a romantic escape or a solo retreat in the heart of the city.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King Bed</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> City View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 7. Comfort Room, 1 King Bed -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Room</span><img src="images/2024/12/Exclusive-Villa-21.webp" alt="Comfort Room, 1 King Bed"></div>
+          <h3>Comfort Room, 1 King Bed</h3>
+          <div class="feat"><span>1 King Bed</span><span>2 Guests</span><span>City View</span></div>
+          <p>This stylish room sleeps 2 guests and features a luxurious King bed with stunning city views, perfect for a romantic escape or a solo retreat in the heart of the city.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- 10. Elite Double Room -->
-        <div class="room-card fade-up">
-          <div class="room-card-image room-gallery" data-gallery>
-            <span class="room-card-badge">City View</span>
-            <div class="rg-track">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-6.webp" alt="Elite Double Room" loading="lazy">
-              <img src="images/2025/02/FOTO-VILLA-AZUR-7.webp" alt="Elite Double Room interior" loading="lazy">
-              <img src="images/2024/12/Exclusive-Villa-44.webp" alt="Elite Double Room queen beds" loading="lazy">
-            </div>
-            <button type="button" class="rg-nav rg-prev" aria-label="Previous photo">‹</button>
-            <button type="button" class="rg-nav rg-next" aria-label="Next photo">›</button>
-            <div class="rg-dots"></div>
-          </div>
-          <div class="room-card-body">
-            <h3>Elite Double Room, 2 Queen Beds, City View</h3>
-            <p>This spacious room accommodates 4 guests and features two comfortable Queen beds with a captivating city view, making it an excellent choice for families or friends looking to explore the urban and beach landscape together.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 2 Queen Beds</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Up to 4</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> City View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 8. Elite Double Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">City View</span><img src="images/2025/02/FOTO-VILLA-AZUR-6.webp" alt="Elite Double Room, 2 Queen Beds, City View"></div>
+          <h3>Elite Double Room, 2 Queen Beds, City View</h3>
+          <div class="feat"><span>2 Queen Beds</span><span>Up to 4</span><span>City View</span></div>
+          <p>This spacious room accommodates 4 guests and features two comfortable Queen beds with a captivating city view, making it an excellent choice for families or friends looking to explore the urban and beach landscape together.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 08 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Casita</span>
-            <img src="assets/paradiso-rooms/room-08.jpg" alt="Casita Junior Suite" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Casita Junior Suite</h3>
-            <p>A private casita with its own separate entrance, a comfortable King bed and en-suite bathroom — ideal for guests who want extra privacy, just steps from the pool and gardens.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Private Casita</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 9. Casita Junior Suite -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Casita</span><img src="assets/paradiso-rooms/room-08.jpg" alt="Casita Junior Suite"></div>
+          <h3>Casita Junior Suite</h3>
+          <div class="feat"><span>1 King</span><span>2 Guests</span><span>Private Casita</span></div>
+          <p>A private casita with its own separate entrance, a comfortable King bed and en-suite bathroom — ideal for guests who want extra privacy, just steps from the pool and gardens.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 09 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Casita</span>
-            <img src="assets/paradiso-rooms/room-09.jpg" alt="Casita Suite" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Casita Suite</h3>
-            <p>A serene casita suite with a private separate entrance, King bed and en-suite bathroom — a secluded retreat within the hotel grounds.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Private Casita</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 10. Casita Suite -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Casita</span><img src="assets/paradiso-rooms/room-09.jpg" alt="Casita Suite"></div>
+          <h3>Casita Suite</h3>
+          <div class="feat"><span>1 King</span><span>2 Guests</span><span>Private Casita</span></div>
+          <p>A serene casita suite with a private separate entrance, King bed and en-suite bathroom — a secluded retreat within the hotel grounds.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 10 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Ground Floor</span>
-            <img src="assets/paradiso-rooms/room-10.jpg" alt="Garden Room" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Garden Room</h3>
-            <p>A cozy ground-floor room with a full bed and en-suite bathroom, set beside the kitchen and opening toward the garden and pool.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 Full Bed</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ground Floor</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 11. Garden Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Ground Floor</span><img src="assets/paradiso-rooms/room-10.jpg" alt="Garden Room"></div>
+          <h3>Garden Room</h3>
+          <div class="feat"><span>1 Full Bed</span><span>2 Guests</span><span>Ground Floor</span></div>
+          <p>A cozy ground-floor room with a full bed and en-suite bathroom, set beside the kitchen and opening toward the garden and pool.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 11 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Ground Floor</span>
-            <img src="assets/paradiso-rooms/room-11.jpg" alt="Garden Queen Room" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Garden Queen Room</h3>
-            <p>A restful ground-floor room with a Queen bed and en-suite bathroom, steps from the pool garden and common areas.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 Queen</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ground Floor</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 12. Garden Queen Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Ground Floor</span><img src="assets/paradiso-rooms/room-11.jpg" alt="Garden Queen Room"></div>
+          <h3>Garden Queen Room</h3>
+          <div class="feat"><span>1 Queen</span><span>2 Guests</span><span>Ground Floor</span></div>
+          <p>A restful ground-floor room with a Queen bed and en-suite bathroom, steps from the pool garden and common areas.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 12 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Sleeps 4</span>
-            <img src="assets/paradiso-rooms/room-12.jpg" alt="Mega Double Room" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Mega Double Room</h3>
-            <p>A spacious ground-floor room with two King beds and en-suite bathroom — perfect for families or friends sharing, with easy access to the pool and gardens.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 2 King Beds</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Up to 4</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ground Floor</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 13. Mega Double Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Sleeps 4</span><img src="assets/paradiso-rooms/room-12.jpg" alt="Mega Double Room"></div>
+          <h3>Mega Double Room</h3>
+          <div class="feat"><span>2 King Beds</span><span>Up to 4</span><span>Ground Floor</span></div>
+          <p>A spacious ground-floor room with two King beds and en-suite bathroom — perfect for families or friends sharing, with easy access to the pool and gardens.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 13 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Ocean View</span>
-            <img src="assets/paradiso-rooms/room-13.jpg" alt="Ocean View Queen Suite" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Ocean View Queen Suite</h3>
-            <p>A second-floor suite with a Queen bed and en-suite bathroom, framed by sweeping ocean views and Caribbean light.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 Queen</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ocean View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 14. Ocean View Queen Suite -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Ocean View</span><img src="assets/paradiso-rooms/room-13.jpg" alt="Ocean View Queen Suite"></div>
+          <h3>Ocean View Queen Suite</h3>
+          <div class="feat"><span>1 Queen</span><span>2 Guests</span><span>Ocean View</span></div>
+          <p>A second-floor suite with a Queen bed and en-suite bathroom, framed by sweeping ocean views and Caribbean light.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 14 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Garden View</span>
-            <img src="assets/paradiso-rooms/room-14.jpg" alt="Garden King Room" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Garden King Room</h3>
-            <p>A bright second-floor King room with en-suite bathroom overlooking the lush gardens — airy and beautifully appointed.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Garden View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 15. Garden King Room -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Garden View</span><img src="assets/paradiso-rooms/room-14.jpg" alt="Garden King Room"></div>
+          <h3>Garden King Room</h3>
+          <div class="feat"><span>1 King</span><span>2 Guests</span><span>Garden View</span></div>
+          <p>A bright second-floor King room with en-suite bathroom overlooking the lush gardens — airy and beautifully appointed.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 15 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Garden View</span>
-            <img src="assets/paradiso-rooms/room-15.jpg" alt="Garden Queen Suite" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Garden Queen Suite</h3>
-            <p>A second-floor Queen suite with en-suite bathroom and tranquil garden views, designed for comfort and calm.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 Queen</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> 2 Guests</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Garden View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 16. Garden Queen Suite -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Garden View</span><img src="assets/paradiso-rooms/room-15.jpg" alt="Garden Queen Suite"></div>
+          <h3>Garden Queen Suite</h3>
+          <div class="feat"><span>1 Queen</span><span>2 Guests</span><span>Garden View</span></div>
+          <p>A second-floor Queen suite with en-suite bathroom and tranquil garden views, designed for comfort and calm.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
-        <!-- Suite 16 -->
-        <div class="room-card fade-up">
-          <div class="room-card-image" style="position:relative;">
-            <span class="room-card-badge">Largest Suite</span>
-            <img src="assets/paradiso-rooms/room-16.jpg" alt="Grand Ocean View Suite" loading="lazy">
-          </div>
-          <div class="room-card-body">
-            <h3>Grand Ocean View Suite</h3>
-            <p>Our largest suite — a second-floor King suite with a sofa bed, en-suite bathroom and panoramic ocean views. The signature accommodation of the hotel.</p>
-            <div class="room-card-features">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11m0-4h18m0 4V7m-2 0H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2z"/></svg> 1 King + Sofa</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7a4 4 0 108 0v4a4 4 0 11-8 0V7z"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Up to 3</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg> Ocean View</span>
-            </div>
-            <a href="contact.html" class="btn btn-gold-outline" style="width: 100%; justify-content: center;">Inquire</a>
-          </div>
+        <!-- 17. Grand Ocean View Suite -->
+        <div class="suite reveal">
+          <div class="ph"><span class="badge">Largest Suite</span><img src="assets/paradiso-rooms/room-16.jpg" alt="Grand Ocean View Suite"></div>
+          <h3>Grand Ocean View Suite</h3>
+          <div class="feat"><span>1 King + Sofa</span><span>Up to 3</span><span>Ocean View</span></div>
+          <p>Our largest suite — a second-floor King suite with a sofa bed, en-suite bathroom and panoramic ocean views. The signature accommodation of the hotel.</p>
+          <a href="contact.html" class="link">Inquire</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-banner" style="background-image: url('images/2024/12/Exclusive-Villa-34.webp')">
-    <div class="container">
-      <div class="cta-content fade-up">
-        <span class="section-label" style="color: var(--gold-light)">Reservation by Phone</span>
-        <h2>Where Luxury Meets San Juan</h2>
-        <p>Enjoy San Juan at Villa Azure Hotel. Book your luxurious escape today and immerse yourself in ultimate comfort and sophistication. Experience breathtaking ocean views and indulge in top-notch amenities, all designed to make your stay unforgettable.</p>
-        <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="btn btn-primary">Reserve Your Stay</a>
-      </div>
+  <!-- Closing band -->
+  <section class="band reveal">
+    <img src="images/2024/12/Exclusive-Villa-34.webp" alt="Where Luxury Meets San Juan">
+    <h2>Where Luxury Meets San Juan.</h2>
+  </section>
+
+  <!-- Closing -->
+  <section class="closing reveal">
+    <div class="wrap">
+      <img class="mark" src="images/2023/04/VILLA-AZURE-WHITE-370x154.png" alt="Villa Azure" style="filter:brightness(0) saturate(100%) invert(48%) sepia(14%) saturate(760%) hue-rotate(342deg);">
+      <span class="lbl">Reservation by Phone</span>
+      <h2>Where Luxury Meets San Juan.</h2>
+      <p style="color:var(--stone);font-size:16px;max-width:620px;margin:0 auto 36px;">Enjoy San Juan at Villa Azure Hotel. Book your luxurious escape today and immerse yourself in ultimate comfort and sophistication. Experience breathtaking ocean views and indulge in top-notch amenities, all designed to make your stay unforgettable.</p>
+      <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="pill">Reserve Your Stay</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="images/2023/04/VILLA-AZURE-WHITE-370x154.png" alt="Villa Azure">
-          <p>A refined boutique retreat in Ocean Park, San Juan, where timeless luxury meets modern comfort and breathtaking ocean views.</p>
+  <footer class="lux-footer">
+    <div class="wrap">
+      <div class="top">
+        <div class="brand">
+          <img src="images/2023/04/VILLA-AZURE-WHITE-370x154.png" alt="Villa Azure Hotel">
+          <p>A beachfront boutique hotel in Ocean Park, San Juan — sixteen suites where timeless calm meets the sea.</p>
         </div>
-        <div><h5>Explore</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="rooms.html">Rooms &amp; Suites</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="amenities.html">Amenities</a></li></ul></div>
-        <div><h5>Events</h5><ul class="footer-links"><li><a href="weddings.html">Weddings</a></li><li><a href="corporate.html">Corporate</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="about.html">The Hotel</a></li>
+            <li><a href="rooms.html">Suites</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Events</h5>
+          <ul>
+            <li><a href="weddings.html">Weddings</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="es/index.html">Español</a></li>
+          </ul>
+        </div>
         <div>
           <h5>Contact</h5>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1 C. Guerrero Noble,<br>San Juan, 00913, PR</span></div>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>+1 (787) 564-7405</span></div>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><span>info@villaazurehotelpr.com</span></div>
+          <p class="ci">1 Calle Guerrero Noble<br>San Juan, 00913, PR</p>
+          <p class="ci"><a href="tel:+17875647405">+1 (787) 564-7405</a></p>
+          <p class="ci"><a href="mailto:info@villaazurehotelpr.com">info@villaazurehotelpr.com</a></p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2025 Villa Azure Hotel. All rights reserved.</span>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><path d="M17.5 6.5h.01"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-        </div>
+      <div class="bottom">
+        <span>&copy; 2026 Villa Azure Hotel</span>
+        <span>Ocean Park · San Juan · Puerto Rico</span>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/17875647405" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/17875647405" class="wa" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
+  <script>
+    // menu
+    const menu=document.getElementById('menu');
+    document.getElementById('menuOpen').onclick=()=>menu.classList.add('open');
+    document.getElementById('menuClose').onclick=()=>menu.classList.remove('open');
+    menu.querySelectorAll('nav a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+    // header solid on scroll
+    const hd=document.getElementById('luxHeader');
+    addEventListener('scroll',()=>{hd.classList.toggle('solid',scrollY>window.innerHeight-120);});
+    // reveal
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>

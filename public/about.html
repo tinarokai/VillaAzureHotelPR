@@ -40,8 +40,8 @@
   <link rel="icon" href="images/2024/09/cropped-favico-villa-1.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&family=Saira+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/lux.css?v=1">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -50,270 +50,235 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;"><img src="images/2023/04/VILLA-AZURE-WHITE-550x228.png" alt="Villa Azure Hotel"><span style="font-family:var(--font-body);font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold-light);font-weight:600;border-left:1px solid rgba(255,255,255,0.4);padding-left:12px;">Hotel</span></a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">The Hotel</a>
-        <a href="rooms.html">Suites</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="amenities.html">Amenities</a>
-        <a href="weddings.html">Weddings</a>
-        <a href="corporate.html">Corporate</a>
-        <a href="es/about.html" class="nav-cta" style="letter-spacing:0.06em;" title="Español">ES</a>
-        <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="nav-cta">Reserve Your Stay</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
+  <header class="lux-header" id="luxHeader">
+    <button class="burger" id="menuOpen" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="lux-logo"><img src="images/2023/04/VILLA-AZURE-WHITE-1024x425.png" alt="Villa Azure Hotel"><span class="tag">Hotel · Ocean Park</span></a>
+    <div class="hdr-right"><a class="lang-toggle" href="es/about.html">ES</a><a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="pill light">Book</a></div>
   </header>
 
+  <!-- Menu overlay -->
+  <div class="menu" id="menu">
+    <button class="close" id="menuClose">Close</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">The Hotel</a>
+      <a href="rooms.html">Suites</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="amenities.html">Amenities</a>
+      <a href="weddings.html">Weddings</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="foot">
+      <a href="es/index.html">Español</a>
+      <a href="tel:+15612892565">561-289-2565</a>
+      <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener">Reserve</a>
+    </div>
+  </div>
+
   <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="hero-bg" style="background-image: url('images/2025/02/Entrada-Interna-Villa-Azure.webp')"></div>
-    <div class="page-hero-content">
-      <span class="section-label">About Us</span>
-      <h1>Where Boutique Luxury Meets Caribbean Charm</h1>
+  <section class="page-hero reveal">
+    <img src="images/2025/02/Entrada-Interna-Villa-Azure.webp" alt="">
+    <div class="wrap">
+      <div class="page-hero-in">
+        <span class="lbl">The Hotel</span>
+        <h1>Where Boutique Luxury Meets Caribbean Charm</h1>
+        <p>A gated, designer oceanfront hotel in the heart of Ocean Park — sixteen suites steps from San Juan's best beach.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Discover the Essence of Luxury (with video) -->
-  <section class="section">
-    <div class="container">
-      <div class="split-section">
-        <div class="fade-up">
-          <span class="section-label">Welcome to Villa Azure</span>
-          <h2 class="section-title">Discover the Essence of Luxury at Villa Azure</h2>
-          <div class="gold-line"></div>
-          <p style="color: var(--text-light); margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8;">
-            Nestled in Ocean Park, Villa Azure Boutique Hotel is a sanctuary of refined luxury and exclusivity. Offering sophisticated suites, bespoke amenities, and personalized concierge, it&rsquo;s the perfect retreat for romantic getaways, family gatherings, or corporate escapes.
-          </p>
-          <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.8;">
-            Steps from the beach, every detail is designed for an unforgettable ocean retreat experience in Puerto Rico.
-          </p>
+  <!-- Discover the Essence of Luxury -->
+  <section class="sec reveal">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="lbl">Welcome to Villa Azure</span>
+          <h2>Discover the essence of luxury</h2>
+          <p>Nestled in Ocean Park, Villa Azure Boutique Hotel is a sanctuary of refined luxury and exclusivity. Offering sophisticated suites, bespoke amenities, and personalized concierge, it's the perfect retreat for romantic getaways, family gatherings, or corporate escapes.</p>
+          <p>Steps from the beach, every detail is designed for an unforgettable ocean retreat experience in Puerto Rico.</p>
+          <a href="rooms.html" class="link">Explore the Suites</a>
         </div>
-        <div class="split-image fade-up about-video">
-          <video controls preload="metadata" playsinline poster="images/2025/02/FOTO-VILLA-AZUR-1.webp">
-            <source src="/__l5e/assets-v1/10006a32-a6ec-40df-9551-1f7662ea851a/villa-azure-web-1.mp4" type="video/mp4">
-          </video>
-        </div>
+        <div class="ph"><img src="images/2025/02/FOTO-VILLA-AZUR-1.webp" alt="Villa Azure Hotel oceanfront suite"></div>
       </div>
     </div>
+  </section>
+
+  <!-- Beach band -->
+  <section class="band reveal">
+    <img src="images/2024/12/Exclusive-Villa-34.webp" alt="Villa Azure oceanfront pool at Ocean Park">
+    <h2>Where the garden ends, the beach begins.</h2>
   </section>
 
   <!-- Where Every Detail is a Work of Art -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="text-center fade-up" style="max-width: 880px; margin: 0 auto 56px;">
-        <span class="section-label">Design &amp; Art</span>
-        <h2 class="section-title">Where Every Detail is a Work of Art</h2>
-        <div class="gold-line" style="margin-left:auto;margin-right:auto"></div>
-        <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.8; margin-top: 20px;">
-          Villa Azure is a masterpiece of design and culture, brought to life by two visionary creators. Puerto Rican artist <strong>Federick Valent&iacute;n</strong> weaves the essence of the island into striking artistic expressions, while renowned interior designer <strong>Steve Carril</strong> curates an ambiance of contemporary elegance and refined comfort. Together, they have created a seamless fusion of art and luxury, transforming every space into an immersive visual and sensory experience, where sophistication meets the soul of Puerto Rico.
-        </p>
+  <section class="sec sec--sand reveal">
+    <div class="wrap">
+      <div class="center-head">
+        <span class="lbl">Design &amp; Art</span>
+        <h2>Where every detail is a work of art</h2>
+        <div class="rule"></div>
+        <p>Villa Azure is a masterpiece of design and culture, brought to life by two visionary creators. Puerto Rican artist <strong>Federick Valentín</strong> weaves the essence of the island into striking artistic expressions, while renowned interior designer <strong>Steve Carril</strong> curates an ambiance of contemporary elegance and refined comfort. Together, they have created a seamless fusion of art and luxury, transforming every space into an immersive visual and sensory experience, where sophistication meets the soul of Puerto Rico.</p>
       </div>
+    </div>
+  </section>
 
-      <!-- Designers Portraits -->
-      <div class="designers-portraits fade-up">
-        <figure>
-          <img src="images/2024/10/front-view-smiley-man-work-370x555.jpg" alt="Steve Carril, Interior Designer">
-          <figcaption>
-            <h4>Steve Carril</h4>
-            <span>Interior Designer</span>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="images/2024/10/https___cloudfront-us-east-1.images.arcpublishing.com_gfrmedia_CFOQXSVVZZCZTKYEQAWDO5ZTRM-1-370x557.jpg" alt="Federick Valentín, Artist">
-          <figcaption>
-            <h4>Federick Valent&iacute;n</h4>
-            <span>Artist</span>
-          </figcaption>
-        </figure>
+  <!-- Art / Craft feature -->
+  <section class="craft">
+    <div class="feature reveal">
+      <div class="ph"><img src="assets/paradiso-rooms/room-16.jpg" alt="Suite with original artwork at Villa Azure Hotel"></div>
+      <div class="txt">
+        <span class="lbl">The Creators</span>
+        <h2>A hotel with a hand behind it</h2>
+        <p>Interiors by designer Steve Carril, hung with bold original works by Puerto Rican artist Federick Valentín. Colour, craft, and character in every room — a fusion of art and luxury that carries the soul of Puerto Rico.</p>
+        <a href="gallery.html" class="link">See the Gallery</a>
       </div>
     </div>
   </section>
 
   <!-- An Exclusive Ocean Retreat -->
-  <section class="section">
-    <div class="container">
-      <div class="split-section">
-        <div class="split-image fade-up">
-          <img src="images/2024/12/Exclusive-Villa-34.webp" alt="Villa Azure Ocean Retreat">
-        </div>
-        <div class="fade-up">
-          <span class="section-label">The Property</span>
-          <h2 class="section-title">An Exclusive Ocean Retreat</h2>
-          <div class="gold-line"></div>
-          <p style="color: var(--text-light); margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8;">
-            Experience the ultimate in privacy and sophistication at Villa Azure Hotel, featuring 16 beautifully appointed suites, each with its own private bathroom, accommodating up to 32 guests across king and queen configurations. Revel in breathtaking ocean views while enjoying premium amenities, including spacious great rooms, fully equipped kitchens, private pools and oceanfront gardens.
-          </p>
-          <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.8;">
-            Step out onto the balcony, fire up the BBQ in the outdoor area, or unwind in the lush garden. With convenient parking and quick access to the beach, this ocean retreat is the perfect setting for unforgettable gatherings with family and friends.
-          </p>
+  <section class="sec reveal">
+    <div class="wrap">
+      <div class="split alt">
+        <div class="ph"><img src="images/2024/12/Exclusive-Villa-34.webp" alt="Villa Azure exclusive ocean retreat"></div>
+        <div>
+          <span class="lbl">The Property</span>
+          <h2>An exclusive ocean retreat</h2>
+          <p>Experience the ultimate in privacy and sophistication at Villa Azure Hotel, featuring 16 beautifully appointed suites, each with its own private bathroom, accommodating up to 32 guests across king and queen configurations. Revel in breathtaking ocean views while enjoying premium amenities, including spacious great rooms, fully equipped kitchens, private pools and oceanfront gardens.</p>
+          <p>Step out onto the balcony, fire up the BBQ in the outdoor area, or unwind in the lush garden. With convenient parking and quick access to the beach, this ocean retreat is the perfect setting for unforgettable gatherings with family and friends.</p>
+          <a href="amenities.html" class="link">The Amenities</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- A Charming Venue for Unforgettable Events -->
-  <section class="cta-banner" style="background-image: url('images/2025/02/FOTO-VILLA-AZUR-7.webp')">
-    <div class="container">
-      <div class="cta-content fade-up">
-        <span class="section-label" style="color: var(--gold-light)">Events</span>
-        <h2>A Charming Venue for Unforgettable Events</h2>
-        <p>Celebrate your wedding, corporate retreat, or private event in the refined elegance of Villa Azure Hotel. With sophisticated spaces, luxury amenities, and personalized service, we craft seamless and unforgettable experiences tailored to your vision. Whether you&rsquo;re hosting an intimate gathering or a grand celebration, every detail is meticulously curated to ensure your event is as extraordinary as the stunning surroundings.</p>
-        <div class="hero-buttons">
-          <a href="weddings.html" class="btn btn-primary">Weddings</a>
-          <a href="corporate.html" class="btn btn-outline">Corporate</a>
+  <!-- Events -->
+  <section class="sec sec--sand reveal">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="lbl">Events</span>
+          <h2>A charming venue for unforgettable events</h2>
+          <p>Celebrate your wedding, corporate retreat, or private event in the refined elegance of Villa Azure Hotel. With sophisticated spaces, luxury amenities, and personalized service, we craft seamless and unforgettable experiences tailored to your vision. Whether you're hosting an intimate gathering or a grand celebration, every detail is meticulously curated to ensure your event is as extraordinary as the stunning surroundings.</p>
+          <a href="weddings.html" class="link">Weddings</a>
         </div>
+        <div class="ph"><img src="images/2025/02/FOTO-VILLA-AZUR-7.webp" alt="Oceanfront event space at Villa Azure Hotel"></div>
       </div>
     </div>
   </section>
 
   <!-- An Exclusive Experience Awaits -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Why Villa Azure</span>
-        <h2 class="section-title">An Exclusive Experience Awaits</h2>
-        <div class="gold-line" style="margin-left:auto;margin-right:auto"></div>
+  <section class="sec reveal">
+    <div class="wrap">
+      <div class="center-head" style="margin-bottom:70px;">
+        <span class="lbl">Why Villa Azure</span>
+        <h2>An exclusive experience awaits</h2>
+        <div class="rule"></div>
       </div>
-      <div class="experience-grid">
-        <div class="experience-card fade-up">
-          <div class="experience-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8 22v18h32V22"/>
-              <path d="M4 22l20-14 20 14"/>
-              <path d="M20 40v-10h8v10"/>
-              <path d="M14 28h2M32 28h2"/>
-            </svg>
-          </div>
-          <div class="experience-body">
-            <h3>Exclusive Boutique Stay</h3>
-            <p>Indulge in the privacy and sophistication of Villa Azure Hotel, featuring sixteen elegantly designed suites, spacious living areas, and premium amenities for an unparalleled escape. Enjoy breathtaking ocean views and immerse yourself in luxurious comforts that redefine relaxation.</p>
-          </div>
+      <div class="amenity-grid">
+        <div class="amenity">
+          <span class="lbl">Boutique Stay</span>
+          <h3>Exclusive Boutique Stay</h3>
+          <p>Indulge in the privacy and sophistication of Villa Azure Hotel, featuring sixteen elegantly designed suites, spacious living areas, and premium amenities for an unparalleled escape. Enjoy breathtaking ocean views and immerse yourself in luxurious comforts that redefine relaxation.</p>
         </div>
-        <div class="experience-card fade-up">
-          <div class="experience-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M24 6l3 9h9l-7.5 5.5L31 30l-7-5.5L17 30l2.5-9.5L12 15h9z"/>
-              <path d="M10 38h28"/>
-              <path d="M14 42h20"/>
-            </svg>
-          </div>
-          <div class="experience-body">
-            <h3>Private Luxury Amenities</h3>
-            <p>Indulge in a private pool, one fully equipped kitchen and one kitchenette, BBQ area, garden, and stylish lounge spaces, all curated for relaxation and sophisticated comfort.</p>
-          </div>
+        <div class="amenity">
+          <span class="lbl">Amenities</span>
+          <h3>Private Luxury Amenities</h3>
+          <p>Indulge in a private pool, one fully equipped kitchen and one kitchenette, BBQ area, garden, and stylish lounge spaces, all curated for relaxation and sophisticated comfort.</p>
         </div>
-        <div class="experience-card fade-up">
-          <div class="experience-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="24" cy="14" r="6"/>
-              <path d="M10 36c0-7 6.3-12 14-12s14 5 14 12"/>
-              <path d="M6 40h36"/>
-              <path d="M24 8V4"/>
-            </svg>
-          </div>
-          <div class="experience-body">
-            <h3>Personalized Concierge Service</h3>
-            <p>From tailored itineraries to exclusive experiences, our dedicated concierge team ensures your stay is seamless and unforgettable.</p>
-          </div>
+        <div class="amenity">
+          <span class="lbl">Concierge</span>
+          <h3>Personalized Concierge Service</h3>
+          <p>From tailored itineraries to exclusive experiences, our dedicated concierge team ensures your stay is seamless and unforgettable.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location / Map -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Location</span>
-        <h2 class="section-title">The Heart of Ocean Park</h2>
-        <div class="gold-line" style="margin-left:auto;margin-right:auto"></div>
-        <p class="section-subtitle">1 C. Guerrero Noble, San Juan, 00913, Puerto Rico &mdash; steps from Ocean Park Beach, minutes from Condado and Old San Juan.</p>
+  <!-- Location -->
+  <section class="sec sec--sand reveal">
+    <div class="wrap">
+      <div class="center-head">
+        <span class="lbl">Location</span>
+        <h2>The heart of Ocean Park</h2>
+        <div class="rule"></div>
+        <p>1 C. Guerrero Noble, San Juan, 00913, Puerto Rico — steps from Ocean Park Beach, minutes from Condado and Old San Juan.</p>
       </div>
-      <div style="margin-top: 48px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);" class="fade-up">
+      <div style="margin-top:56px;overflow:hidden;">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.2!2d-66.07!3d18.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f4e1a2b3c5d%3A0x1234567890abcdef!2s5+C.+Guerrero+Noble%2C+San+Juan%2C+00913%2C+Puerto+Rico!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-          width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+          width="100%" height="420" style="border:0;display:block;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
   <!-- Closing -->
-  <section class="section section--cream" id="closing">
-    <div class="container">
-      <div class="closing-grid">
-        <div class="fade-up closing-image">
-          <img src="images/2024/09/01-1.png" alt="Villa Azure">
-        </div>
-        <div class="fade-up closing-text">
-          <h2 class="section-title">Villa Azure</h2>
-          <div class="gold-line"></div>
-          <p>Villa Azure Hotel is the perfect destination for an unforgettable vacation, where luxury and comfort seamlessly intertwine to create an exceptional experience. The ocean retreat is thoughtfully designed to ensure maximum relaxation and satisfaction. Enjoy a refreshing pool, fully equipped kitchen, and spacious lounges tastefully decorated, all set within beautiful gardens.</p>
-          <p>Villa Azure combines magnificent facilities with a prime location in San Juan, making your stay truly memorable. Here, grandeur meets an unbeatable location, creating an idyllic retreat for family getaways, corporate retreats, or romantic escapes. Book your luxurious escape today and immerse yourself in the ultimate comfort and sophistication!</p>
-          <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:24px">Reserve Your Stay</a>
-        </div>
-      </div>
+  <section class="closing reveal">
+    <div class="wrap">
+      <img class="mark" src="images/2023/04/VILLA-AZURE-WHITE-370x154.png" alt="Villa Azure" style="filter:brightness(0) saturate(100%) invert(48%) sepia(14%) saturate(760%) hue-rotate(342deg);">
+      <span class="lbl">Villa Azure</span>
+      <h2>Grandeur meets an unbeatable location.</h2>
+      <p style="color:var(--stone);font-size:16px;max-width:660px;margin:0 auto 36px;">Villa Azure Hotel is the perfect destination for an unforgettable vacation, where luxury and comfort seamlessly intertwine. A prime San Juan location and magnificent facilities make an idyllic retreat for family getaways, corporate retreats, or romantic escapes. Book your luxurious escape today.</p>
+      <a href="https://villaazure.guestybookings.com/en" target="_blank" rel="noopener" class="pill">Reserve Your Stay</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="images/2023/04/VILLA-AZURE-WHITE-370x154.png" alt="Villa Azure">
-          <p>A refined boutique retreat in Ocean Park, San Juan, where timeless luxury meets modern comfort and breathtaking ocean views.</p>
+  <footer class="lux-footer">
+    <div class="wrap">
+      <div class="top">
+        <div class="brand">
+          <img src="images/2023/04/VILLA-AZURE-WHITE-370x154.png" alt="Villa Azure Hotel">
+          <p>A beachfront boutique hotel in Ocean Park, San Juan — sixteen suites where timeless calm meets the sea.</p>
         </div>
         <div>
           <h5>Explore</h5>
-          <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+          <ul>
+            <li><a href="about.html">The Hotel</a></li>
+            <li><a href="rooms.html">Suites</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="amenities.html">Amenities</a></li>
           </ul>
         </div>
         <div>
           <h5>Events</h5>
-          <ul class="footer-links">
+          <ul>
             <li><a href="weddings.html">Weddings</a></li>
             <li><a href="corporate.html">Corporate</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="es/index.html">Español</a></li>
           </ul>
         </div>
         <div>
           <h5>Contact</h5>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>1 C. Guerrero Noble,<br>San Juan, 00913, PR</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <span>+1 (787) 564-7405</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-            <span>info@villaazurehotelpr.com</span>
-          </div>
+          <p class="ci">1 Calle Guerrero Noble<br>San Juan, 00913, PR</p>
+          <p class="ci"><a href="tel:+17875647405">+1 (787) 564-7405</a></p>
+          <p class="ci"><a href="mailto:info@villaazurehotelpr.com">info@villaazurehotelpr.com</a></p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2025 Villa Azure Hotel. All rights reserved.</span>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><path d="M17.5 6.5h.01"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-        </div>
+      <div class="bottom">
+        <span>&copy; 2026 Villa Azure Hotel</span>
+        <span>Ocean Park · San Juan · Puerto Rico</span>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/17875647405" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/17875647405" class="wa" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="js/main.js"></script>
+  <script>
+    // menu
+    const menu=document.getElementById('menu');
+    document.getElementById('menuOpen').onclick=()=>menu.classList.add('open');
+    document.getElementById('menuClose').onclick=()=>menu.classList.remove('open');
+    menu.querySelectorAll('nav a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+    // header solid on scroll
+    const hd=document.getElementById('luxHeader');
+    addEventListener('scroll',()=>{hd.classList.toggle('solid',scrollY>window.innerHeight-120);});
+    // reveal
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
