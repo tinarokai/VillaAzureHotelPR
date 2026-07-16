@@ -55,15 +55,13 @@ export const Route = createFileRoute("/api/public/contact")({
             );
           }
 
-          // Try to notify info@villaazurehotelpr.com via Lovable Emails.
-          // If the email domain isn't set up yet, the submission is still stored.
+          // Notify info@villaazurehotelpr.com once the Lovable Emails domain is verified.
           try {
-            const { sendLovableEmail } = await import("@lovable.dev/email-js");
-            await sendLovableEmail({
-              to: "info@villaazurehotelpr.com",
-              subject: `New enquiry: ${data.subject || "Website contact"} — ${data.name}`,
-              replyTo: data.email,
-              html: `
+            const apiKey = process.env.LOVABLE_API_KEY;
+            const senderDomain = process.env.LOVABLE_EMAIL_SENDER_DOMAIN;
+            if (apiKey && senderDomain) {
+              const { sendLovableEmail } = await import("@lovable.dev/email-js");
+              const html = `
                 <h2>New website enquiry</h2>
                 <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
                 <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
@@ -72,8 +70,21 @@ export const Route = createFileRoute("/api/public/contact")({
                 <p><strong>Source:</strong> ${escapeHtml(data.source || "—")} (${escapeHtml(data.locale || "en")})</p>
                 <hr>
                 <p style="white-space:pre-wrap">${escapeHtml(data.message)}</p>
-              `,
-            });
+              `;
+              const text = `New website enquiry\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || "-"}\nSubject: ${data.subject || "-"}\nSource: ${data.source || "-"} (${data.locale || "en"})\n\n${data.message}`;
+              await sendLovableEmail(
+                {
+                  to: "info@villaazurehotelpr.com",
+                  from: `Villa Azure Website <notifications@${senderDomain}>`,
+                  sender_domain: senderDomain,
+                  reply_to: data.email,
+                  subject: `New enquiry: ${data.subject || "Website contact"} — ${data.name}`,
+                  html,
+                  text,
+                },
+                { apiKey },
+              );
+            }
           } catch (mailErr) {
             console.warn("[contact] email send skipped/failed", mailErr);
           }
