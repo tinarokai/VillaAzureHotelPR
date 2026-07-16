@@ -1702,3 +1702,225 @@ h4 { font-size: 1.25rem; }
 }
 .faq-item[open] summary::after { content: '\2212'; }
 .faq-item summary:hover { color: var(--gold, #B8892E); }
+
+/* =====================================================================
+   EDITORIAL LUXURY UPGRADE — premium hotel header + hero treatment
+   Applies to every page. Do not remove without redesigning the header.
+   ===================================================================== */
+
+/* Refined nav band */
+.header {
+  padding: 0 40px;
+}
+.header--top {
+  background: transparent;
+  padding-top: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.header--scrolled {
+  background: rgba(6, 22, 51, 0.85);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  border-bottom: 1px solid rgba(221,198,138,0.14);
+  box-shadow: none;
+}
+.header-inner {
+  height: 92px;
+  gap: 32px;
+}
+.logo img { height: 34px; }
+.logo span {
+  font-family: 'Montserrat', var(--font-body), sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.5em !important;
+  color: var(--gold-light) !important;
+  border-left-color: rgba(255,255,255,0.25) !important;
+}
+
+.nav-links { gap: 30px; }
+.nav-links a {
+  font-family: 'Montserrat', var(--font-body), sans-serif;
+  font-size: 10.5px;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.82);
+  padding: 6px 0;
+}
+.nav-links a::after {
+  bottom: 0;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+/* Refined reservation CTA — bordered, not filled */
+.nav-cta {
+  background: transparent !important;
+  color: var(--gold-light) !important;
+  border: 1px solid rgba(221,198,138,0.55) !important;
+  border-radius: 0 !important;
+  padding: 11px 22px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.32em !important;
+  font-size: 9.5px !important;
+  transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--navy-dark) !important;
+  border-color: var(--gold) !important;
+  transform: none !important;
+}
+/* Language toggle ES / EN — quieter than the reserve CTA */
+.nav-links a[href*="/es/"],
+.nav-links a[href$="/es"],
+.nav-links a[href="../index.html"].nav-cta,
+.nav-links a[href="../en/index.html"] {
+  background: transparent !important;
+  color: rgba(255,255,255,0.75) !important;
+  border: none !important;
+  padding: 6px 0 !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.28em !important;
+  position: relative;
+  margin-left: 6px;
+}
+.nav-links a[href*="/es/"]::before,
+.nav-links a[href$="/es"]::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,0.25);
+}
+
+/* Hero — cinematic editorial */
+.hero {
+  background: #0a0a0a;
+}
+.hero-bg::after {
+  background: linear-gradient(
+    180deg,
+    rgba(6,12,24,0.55) 0%,
+    rgba(6,12,24,0.28) 40%,
+    rgba(6,12,24,0.75) 100%
+  );
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.35) 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1100px;
+  padding: 0 32px;
+}
+
+.hero-eyebrow,
+.hero-content .section-label {
+  display: inline-block;
+  font-family: 'Montserrat', var(--font-body), sans-serif;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.hero-eyebrow::after,
+.hero-content .section-label::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: clamp(2.4rem, 5.4vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.35);
+  max-width: 1000px;
+  margin-bottom: 44px;
+}
+.hero-content h1 em,
+.hero-content h1 i {
+  font-style: italic;
+  color: var(--gold-light);
+  font-weight: 300;
+}
+
+.hero-content p {
+  font-family: 'Montserrat', var(--font-body), sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Editorial location tag at bottom-left corner of the hero */
+.hero::after {
+  content: 'Ocean Park · San Juan · Puerto Rico';
+  position: absolute;
+  left: 48px;
+  bottom: 40px;
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  pointer-events: none;
+}
+
+/* Refined scroll cue */
+.hero-scroll {
+  bottom: 34px;
+  opacity: 0.8;
+  color: var(--gold-light);
+}
+.hero-scroll svg { width: 20px; height: 20px; }
+
+/* Hairline vertical accents flanking the hero on wide screens */
+@media (min-width: 1100px) {
+  .hero .hero-content::before,
+  .hero .hero-content::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 1px;
+    height: 120px;
+    background: linear-gradient(180deg, transparent, rgba(221,198,138,0.35), transparent);
+    transform: translateY(-50%);
+  }
+  .hero .hero-content::before { left: -80px; }
+  .hero .hero-content::after  { right: -80px; }
+}
+
+/* Mobile refinements */
+@media (max-width: 900px) {
+  .header { padding: 0 20px; }
+  .header-inner { height: 72px; }
+  .hero::after { left: 20px; bottom: 24px; letter-spacing: 0.35em; }
+  .hero-content h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-eyebrow, .hero-content .section-label {
+    font-size: 10px; letter-spacing: 0.36em; margin-bottom: 24px; padding-bottom: 16px;
+  }
+}
