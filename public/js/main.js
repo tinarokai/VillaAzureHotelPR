@@ -178,20 +178,51 @@ if (lightbox) {
   });
 }
 
-// Contact form (basic)
+// Contact form → POST to /api/public/contact
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  const isSpanish = document.documentElement.lang === 'es' || location.pathname.startsWith('/es');
+  const T = isSpanish
+    ? { sending: 'Enviando…', ok: '¡Mensaje enviado!', err: 'Error, intente nuevamente', label: 'Enviar Mensaje' }
+    : { sending: 'Sending…', ok: 'Message Sent!', err: 'Error, please try again', label: 'Send Message' };
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent!';
-    btn.style.background = '#25d366';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
-      btn.style.color = '';
+    const originalLabel = btn.textContent || T.label;
+    btn.disabled = true;
+    btn.textContent = T.sending;
+    const fd = new FormData(contactForm);
+    const payload = {
+      name: (fd.get('name') || '').toString(),
+      email: (fd.get('email') || '').toString(),
+      phone: (fd.get('phone') || '').toString(),
+      subject: (fd.get('subject') || '').toString(),
+      message: (fd.get('message') || '').toString(),
+      source: location.pathname,
+      locale: isSpanish ? 'es' : 'en',
+    };
+    try {
+      const res = await fetch('/api/public/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('bad status');
+      btn.textContent = T.ok;
+      btn.style.background = '#25d366';
+      btn.style.color = '#fff';
       contactForm.reset();
-    }, 3000);
+    } catch (err) {
+      btn.textContent = T.err;
+      btn.style.background = '#c0392b';
+      btn.style.color = '#fff';
+    } finally {
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 4000);
+    }
   });
 }
