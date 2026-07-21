@@ -130,7 +130,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <video class="hero-video" src="/videos/hero-mobile-autoplay.mp4" data-desktop-src="/__l5e/assets-v1/c373023c-2d26-4ac4-8581-18588d89390f/3er-post-villa-azure-1-8-2025-1.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="auto" disableRemotePlayback disablePictureInPicture poster="images/2025/02/FOTO-VILLA-AZUR-1.webp"></video>
+    <video class="hero-video" src="/__l5e/assets-v1/47ac6486-5c08-4341-85a3-3a5c5e56996c/hero-mobile-autoplay.mp4" data-mobile-src="/__l5e/assets-v1/47ac6486-5c08-4341-85a3-3a5c5e56996c/hero-mobile-autoplay.mp4" data-desktop-src="/__l5e/assets-v1/c373023c-2d26-4ac4-8581-18588d89390f/3er-post-villa-azure-1-8-2025-1.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="auto" disableRemotePlayback disablePictureInPicture poster="images/2025/02/FOTO-VILLA-AZUR-1.webp"></video>
     <script>!function(){var v=document.currentScript.previousElementSibling;if(matchMedia('(min-width:901px)').matches){v.src=v.dataset.desktopSrc;v.load();}}();</script>
     <div class="hero-in">
       <span class="lbl">Beachfront · Ocean Park, San Juan</span>
@@ -374,7 +374,7 @@
       document.querySelectorAll('video').forEach((v)=>{
         v.muted=true; v.defaultMuted=true; v.playsInline=true; v.autoplay=true;
         v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
-        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('/videos/hero-mobile-autoplay.mp4')===-1){v.src='/videos/hero-mobile-autoplay.mp4';v.load();}
+        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-mobile-autoplay.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
         const play=()=>v.play().catch(()=>{});
         if(v.readyState<2){v.addEventListener('loadedmetadata',play,{once:true});v.addEventListener('canplay',play,{once:true});}
         play(); setTimeout(play,400); setTimeout(play,1200);
