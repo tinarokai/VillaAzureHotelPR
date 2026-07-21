@@ -198,14 +198,31 @@ if (contactForm) {
 
 // Force autoplay on mobile (iOS/Android sometimes needs an explicit play() call)
 (function(){
-  function playAll(){
-    document.querySelectorAll('video').forEach(function(v){
+  function kick(v){
+    try {
       v.muted = true;
+      v.defaultMuted = true;
       v.setAttribute('muted','');
       v.setAttribute('playsinline','');
+      v.setAttribute('webkit-playsinline','');
+      v.setAttribute('autoplay','');
       v.playsInline = true;
+      v.autoplay = true;
       var p = v.play();
-      if (p && p.catch) p.catch(function(){});
+      if (p && p.catch) p.catch(function(){
+        // Retry once after a tick (helps iOS after metadata loads)
+        setTimeout(function(){ try { v.play().catch(function(){}); } catch(e){} }, 300);
+      });
+    } catch(e){}
+  }
+  function playAll(){
+    document.querySelectorAll('video').forEach(function(v){
+      if (v.readyState < 2) {
+        v.addEventListener('loadedmetadata', function(){ kick(v); }, { once: true });
+        v.addEventListener('canplay', function(){ kick(v); }, { once: true });
+        try { v.load(); } catch(e){}
+      }
+      kick(v);
     });
   }
   if (document.readyState === 'loading') {
@@ -214,7 +231,11 @@ if (contactForm) {
     playAll();
   }
   window.addEventListener('load', playAll);
-  ['touchstart','click','scroll'].forEach(function(ev){
+  ['touchstart','touchend','click','scroll','pointerdown'].forEach(function(ev){
     window.addEventListener(ev, playAll, { once: true, passive: true });
+  });
+  // When tab becomes visible again, retry
+  document.addEventListener('visibilitychange', function(){
+    if (!document.hidden) playAll();
   });
 })();
