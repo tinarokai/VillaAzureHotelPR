@@ -108,9 +108,11 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 
 /* band */
 .band{height:82vh;min-height:560px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;}
-.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.band img,.band video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .band::after{content:"";position:absolute;inset:0;background:rgba(35,32,27,.32);}
 .band h2{position:relative;z-index:2;color:#fff;font-size:clamp(2.1rem,3.9vw,3.5rem);max-width:960px;padding:0 30px;}
+.band--wide{height:auto;aspect-ratio:16/9;min-height:480px;max-height:85vh;}
+.band--wide::after{background:rgba(35,32,27,.18);}
 
 /* mosaic */
 .mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:26px;margin-top:76px;}
