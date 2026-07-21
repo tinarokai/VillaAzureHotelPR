@@ -177,7 +177,14 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 
 @media(max-width:900px){
   .wrap{padding:0 26px;}
-  .lux-header{padding:24px 26px;}
+  .lux-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);padding:24px 22px;align-items:center;}
+  .burger{justify-self:start;}
+  .lux-logo{justify-self:center;min-width:0;}
+  .lux-logo img{height:26px;}
+  .lux-logo .tag{font-size:8px;letter-spacing:.34em;white-space:nowrap;}
+  .hdr-right{justify-self:end;gap:14px;}
+  .hdr-right .pill{padding:10px 17px;font-size:11px;letter-spacing:.2em;}
+  .lang-toggle{font-size:11px;letter-spacing:.18em;}
   .feature{grid-template-columns:1fr;}
   .feature .ph{height:60vh;min-height:400px;}
   .feature.alt .ph{order:0;}
