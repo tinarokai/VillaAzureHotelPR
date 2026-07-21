@@ -195,3 +195,26 @@ if (contactForm) {
     }, 3000);
   });
 }
+
+// Force autoplay on mobile (iOS/Android sometimes needs an explicit play() call)
+(function(){
+  function playAll(){
+    document.querySelectorAll('video').forEach(function(v){
+      v.muted = true;
+      v.setAttribute('muted','');
+      v.setAttribute('playsinline','');
+      v.playsInline = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){});
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', playAll);
+  } else {
+    playAll();
+  }
+  window.addEventListener('load', playAll);
+  ['touchstart','click','scroll'].forEach(function(ev){
+    window.addEventListener(ev, playAll, { once: true, passive: true });
+  });
+})();
