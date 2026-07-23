@@ -30,7 +30,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 .burger{display:flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .burger span{width:26px;height:1.5px;background:#fff;transition:.3s;}
 .lux-logo{display:flex;flex-direction:column;align-items:center;gap:7px;}
-.lux-logo img{height:30px;width:auto;}
+.lux-logo img{height:38px;width:auto;}
 .lux-logo .tag{font-family:var(--cond);font-size:9.5px;letter-spacing:.5em;text-transform:uppercase;color:rgba(255,255,255,.82);}
 
 /* full-screen menu */
@@ -180,7 +180,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
   .lux-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);padding:24px 22px;align-items:center;}
   .burger{justify-self:start;}
   .lux-logo{justify-self:center;min-width:0;}
-  .lux-logo img{height:26px;}
+  .lux-logo img{height:31px;}
   .lux-logo .tag{font-size:8px;letter-spacing:.34em;white-space:nowrap;}
   .hdr-right{justify-self:end;gap:14px;}
   .hdr-right .pill{padding:10px 17px;font-size:11px;letter-spacing:.2em;}
