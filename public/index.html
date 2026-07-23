@@ -347,6 +347,7 @@
     const menu=document.getElementById('menu');
     document.getElementById('menuOpen').onclick=()=>menu.classList.add('open');
     document.getElementById('menuClose').onclick=()=>menu.classList.remove('open');
+    menu.onclick=e=>{if(e.target===menu)menu.classList.remove('open')};
     menu.querySelectorAll('nav a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
     // header solid on scroll
     const hd=document.getElementById('luxHeader');
