@@ -145,4 +145,94 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/experiences</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/experiences"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/experiences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/experiences"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/es/experiences</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/experiences"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/experiences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/experiences"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/spa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/spa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/spa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/spa"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/es/spa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/spa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/spa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/spa"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/yoga</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/yoga"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/yoga"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/yoga"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/es/yoga</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/yoga"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/yoga"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/yoga"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/massage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/massage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/massage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/massage"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/es/massage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/massage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/massage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/massage"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/kitesurfing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/kitesurfing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/kitesurfing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/kitesurfing"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/es/kitesurfing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/kitesurfing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/kitesurfing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/kitesurfing"/>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
