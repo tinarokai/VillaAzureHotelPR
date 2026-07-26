@@ -1,6 +1,11 @@
 /* Villa Azure Concierge — preset-question chat widget (no external services) */
 (function () {
   var API = 'https://villa-azure-concierge.pablo-974.workers.dev';
+  var SID = '';
+  try {
+    SID = localStorage.getItem('vz_sid') || '';
+    if (!SID) { SID = Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem('vz_sid', SID); }
+  } catch (e) {}
   var ES = (document.documentElement.lang || 'en').indexOf('es') === 0;
   var waLink = (document.querySelector('.wa') || {}).href || 'https://wa.me/17875647405';
   var BOOK = ES ? 'https://villaazurevillaparadiso.guestybookings.com/es' : 'https://villaazurevillaparadiso.guestybookings.com/en';
@@ -114,14 +119,14 @@
     title: 'Concierge Villa Azure', sub: 'Respuestas al instante',
     hi: '¡Hola! Soy el concierge digital de Villa Azure. Elige una pregunta, o escribe la tuya:',
     more: '¿Algo más?', typed_ph: 'Escribe tu pregunta…',
-    nomatch: 'Buena pregunta — no tengo esa respuesta a la mano, pero nuestro equipo sí. Tocá abajo y te contestamos por WhatsApp.',
+    nomatch: 'Buena pregunta — no tengo esa respuesta a la mano, pero nuestro equipo sí. Toca abajo para escribirnos por WhatsApp, y nuestra respuesta también aparecerá aquí en este chat.',
     wa: 'Continuar en WhatsApp', open: 'Preguntas', close: 'Cerrar chat',
     lead: 'O déjanos tu correo y te respondemos:', lead_ph: 'tucorreo@email.com', lead_btn: 'Enviar', lead_ok: 'Listo, te responderemos a {email} pronto.'
   } : {
     title: 'Villa Azure Concierge', sub: 'Instant answers',
     hi: 'Hi! I’m the Villa Azure digital concierge. Tap a question, or type your own:',
     more: 'Anything else?', typed_ph: 'Type your question…',
-    nomatch: 'Great question — I don’t have that answer on hand, but our team does. Tap below and we’ll reply on WhatsApp.',
+    nomatch: 'Great question — I don’t have that answer on hand, but our team does. Tap below to reach us on WhatsApp, and our reply will also appear right here in this chat.',
     wa: 'Continue on WhatsApp', open: 'Questions', close: 'Close chat',
     lead: 'Or leave your email and we’ll get back to you:', lead_ph: 'you@email.com', lead_btn: 'Send', lead_ok: 'Got it — we’ll reply to {email} soon.'
   };
@@ -141,7 +146,8 @@
         text: (params && params.chat_text) || '',
         email: (params && params.chat_email) || '',
         lang: ES ? 'es' : 'en',
-        page: location.pathname
+        page: location.pathname,
+        sid: SID
       });
       if (navigator.sendBeacon) {
         navigator.sendBeacon(API + '/log', new Blob([payload], { type: 'application/json' }));
@@ -161,7 +167,7 @@
     } catch (e) {}
   }
 
-  var css = '.vz-launch{position:fixed;right:24px;bottom:96px;z-index:70;display:flex;align-items:center;gap:10px;background:#2A251F;color:#EDE6DA;border:none;border-radius:40px;padding:13px 22px;font-family:"Saira Condensed",Arial,sans-serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,.28);transition:transform .25s;}' +
+  var css = '.vz-launch{position:fixed;right:24px;bottom:96px;z-index:70;overflow:visible;display:flex;align-items:center;gap:10px;background:#2A251F;color:#EDE6DA;border:none;border-radius:40px;padding:13px 22px;font-family:"Saira Condensed",Arial,sans-serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,.28);transition:transform .25s;}' +
     '.vz-launch:hover{transform:translateY(-2px);}' +
     '.vz-panel{position:fixed;right:24px;bottom:96px;z-index:71;width:min(390px,calc(100vw - 32px));max-height:min(600px,calc(100vh - 120px));display:none;flex-direction:column;background:#F4EEE4;border-radius:14px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.35);font-family:Jost,-apple-system,Helvetica,Arial,sans-serif;}' +
     '.vz-panel.open{display:flex;}' +
@@ -181,6 +187,9 @@
     '.vz-in button{background:none;border:none;color:#A9744F;font-size:18px;padding:0 18px;cursor:pointer;}' +
     '.vz-wa{display:inline-block;background:#25D366;color:#fff;border-radius:30px;padding:9px 17px;font-size:13.5px;text-decoration:none;margin-top:8px;}' +
     '.vz-leadin{margin-top:12px;font-size:13px;color:#7A6F5E;}' +
+    '.vz-dot{position:absolute;top:-3px;right:-3px;width:13px;height:13px;border-radius:50%;background:#C0392B;border:2px solid #F4EEE4;}' +
+    '.vz-reply{border-left:3px solid #A9744F;}' +
+    '.vz-reply .who{font-family:"Saira Condensed",Arial,sans-serif;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#A9744F;margin-bottom:4px;}' +
     '.vz-lead{display:flex;gap:6px;margin-top:6px;}' +
     '.vz-lead input{flex:1;border:1px solid #DBD1C0;border-radius:8px;padding:7px 10px;font-size:13.5px;font-family:inherit;background:#FDFBF7;}' +
     '.vz-lead button{border:none;border-radius:8px;background:#A9744F;color:#fff;padding:7px 14px;font-size:13px;cursor:pointer;}' +
@@ -289,16 +298,51 @@
     }
   });
 
+  var T_WHO = ES ? 'Equipo Villa Azure' : 'Villa Azure team';
+  var renderedReplies = 0;
+  var replies = [];
+  function renderReplies() {
+    if (!panel.classList.contains('open')) return;
+    for (var i = renderedReplies; i < replies.length; i++) {
+      el('vz-msg vz-reply', '<div class="who">' + T_WHO + '</div>' + replies[i].text);
+    }
+    renderedReplies = replies.length;
+    try { localStorage.setItem('vz_seen', String(replies.length)); } catch (e) {}
+    var dot = launch.querySelector('.vz-dot');
+    if (dot) dot.remove();
+  }
+  function checkReplies() {
+    if (!SID) return;
+    fetch(API + '/replies?sid=' + SID).then(function (r) { return r.json(); }).then(function (j) {
+      replies = (j && j.replies) || [];
+      var seen = 0;
+      try { seen = parseInt(localStorage.getItem('vz_seen') || '0', 10); } catch (e) {}
+      if (panel.classList.contains('open')) {
+        if (!started && replies.length) { openIntro(); }
+        renderReplies();
+      } else if (replies.length > seen && !launch.querySelector('.vz-dot')) {
+        var d = document.createElement('span');
+        d.className = 'vz-dot';
+        launch.appendChild(d);
+      }
+    }).catch(function () {});
+  }
+  checkReplies();
+  setInterval(function () { if (document.visibilityState === 'visible') checkReplies(); }, 30000);
+
   var started = false;
+  function openIntro() {
+    if (started) return;
+    started = true;
+    el('vz-msg', T.hi);
+    chips(FAQ.slice(0, 6));
+  }
   function open() {
     panel.classList.add('open');
     launch.style.display = 'none';
     log('chat_opened', {});
-    if (!started) {
-      started = true;
-      el('vz-msg', T.hi);
-      chips(FAQ.slice(0, 6));
-    }
+    openIntro();
+    renderReplies();
   }
   function close() {
     panel.classList.remove('open');
