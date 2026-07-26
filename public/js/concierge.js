@@ -149,11 +149,9 @@
         page: location.pathname,
         sid: SID
       });
-      if (navigator.sendBeacon) {
-        navigator.sendBeacon(API + '/log', new Blob([payload], { type: 'application/json' }));
-      } else {
-        fetch(API + '/log', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true });
-      }
+      fetch(API + '/log', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: payload, keepalive: true }).catch(function () {
+        if (navigator.sendBeacon) navigator.sendBeacon(API + '/log', payload);
+      });
     } catch (e) {}
   }
 
