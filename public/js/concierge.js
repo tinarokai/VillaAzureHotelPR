@@ -23,6 +23,20 @@
       a: 'No hay spa físico: lo llevamos a ti. Terapeutas licenciados dan masajes y tratamientos en tu suite o el jardín, y organizamos yoga privado en la playa. Se coordinan con el concierge y se cotizan por servicio.', link: [P + 'experiences', 'Ver experiencias'] },
     { id: 'kite', q: '¿Se puede hacer kitesurf?', k: ['kite', 'kitesurf', 'surf', 'viento', 'deportes'],
       a: 'Ocean Park es uno de los lugares más reconocidos de Puerto Rico para el kitesurf, y estamos sobre esa misma playa. El concierge te conecta con escuelas locales para clases y alquileres.', link: [P + 'kitesurfing', 'Más del kitesurf'] },
+    { id: 'beach', q: '¿El hotel está frente a la playa?', k: ['playa', 'frente', 'arena', 'mar', 'acceso'],
+      a: 'Sí. El hotel es beachfront en Ocean Park, con acceso directo a la playa y dos piscinas, a pasos de la arena.', link: [P + 'amenities', 'Ver amenidades'] },
+    { id: 'views', q: '¿Las suites tienen vista al mar?', k: ['vista', 'vistas', 'balcon', 'ocean view'],
+      a: 'Muchas de las dieciséis suites tienen vista al mar o a la piscina, incluyendo la Suite Queen Vista al Mar y la Gran Suite Vista al Mar, el alojamiento insignia del hotel.', link: [P + 'rooms', 'Ver las suites'] },
+    { id: 'nearby', q: '¿Qué hay para hacer cerca?', k: ['cerca', 'hacer', 'atracciones', 'visitar', 'turismo', 'viejo san juan', 'condado'],
+      a: 'La playa de Ocean Park está al frente; el Viejo San Juan (reconocido por la UNESCO), la Laguna del Condado para kayak, el Museo de Arte de Puerto Rico y el Distrito T-Mobile con restaurantes y música en vivo quedan a minutos.', link: [P + 'amenities#destinations', 'Destinos cercanos'] },
+    { id: 'airport', q: '¿Qué tan lejos está el aeropuerto?', k: ['aeropuerto', 'sju', 'traslado', 'transporte', 'taxi', 'llegar'],
+      a: 'El aeropuerto internacional Luis Muñoz Marín (SJU) está a unos 15 minutos en auto. Nuestro concierge puede coordinar traslados y alquiler de autos.' },
+    { id: 'dining', q: '¿El desayuno o las comidas están incluidas?', k: ['desayuno', 'comida', 'incluido', 'restaurante', 'cena', 'almuerzo'],
+      a: 'Las comidas no están incluidas por defecto. Nuestro chef privado prepara desde desayunos hasta cenas de varios tiempos, a solicitud y con precio por servicio, y las suites cuentan con cocinas equipadas si prefieres cocinar.', link: [P + 'amenities', 'Ver amenidades'] },
+    { id: 'corporate', q: '¿Reciben retiros corporativos?', k: ['corporativo', 'empresa', 'retiro', 'offsite', 'reunion', 'equipo'],
+      a: 'Sí. Con renta completa del hotel tu equipo tiene espacios de reunión frente al mar, dieciséis suites para hasta 38 personas, chef privado y actividades de playa a pasos.', link: [P + 'corporate', 'Ver corporativo'] },
+    { id: 'family', q: '¿Es bueno para familias y grupos?', k: ['familia', 'ninos', 'grupo', 'amigos', 'conectadas'],
+      a: 'Sí. Hay habitaciones con dos camas King perfectas para familias, habitaciones conectadas, dos piscinas y jardines, y el hotel completo aloja hasta 38 huéspedes.', link: [P + 'rooms', 'Ver las suites'] },
     { id: 'pets', q: '¿Aceptan mascotas?', k: ['mascota', 'perro', 'gato', 'pet'],
       a: 'No, el hotel no acepta mascotas.' },
     { id: 'checkin', q: '¿Horarios de check-in?', k: ['check', 'entrada', 'salida', 'hora', 'llegada'],
@@ -44,6 +58,20 @@
       a: 'No spa walls here — we bring it to you. Licensed therapists do massages and treatments in your suite or garden, and we arrange private beach yoga. Booked via the concierge, priced per service.', link: [P + 'experiences', 'See experiences'] },
     { id: 'kite', q: 'Can I go kitesurfing?', k: ['kite', 'kitesurf', 'surf', 'wind', 'watersports', 'lessons'],
       a: 'Ocean Park is one of Puerto Rico’s best-known kite beaches, and the hotel sits right on it. Our concierge connects you with local schools for lessons and rentals.', link: [P + 'kitesurfing', 'More on kitesurfing'] },
+    { id: 'beach', q: 'Is the hotel right on the beach?', k: ['beach', 'beachfront', 'sand', 'ocean', 'access'],
+      a: 'Yes. The hotel is beachfront in Ocean Park with direct beach access and two pools, just steps from the sand.', link: [P + 'amenities', 'See amenities'] },
+    { id: 'views', q: 'Do the suites have ocean views?', k: ['view', 'views', 'balcony', 'ocean view'],
+      a: 'Many of the sixteen suites have ocean or pool views, including the Ocean View Queen Suite and the Grand Ocean View Suite, the hotel\u2019s signature accommodation.', link: [P + 'rooms', 'See the suites'] },
+    { id: 'nearby', q: 'What is there to do nearby?', k: ['nearby', 'around', 'attractions', 'things to do', 'visit', 'old san juan', 'condado'],
+      a: 'Ocean Park Beach is right out front; Old San Juan (UNESCO-recognized), the Condado Lagoon for kayaking, the Museo de Arte de Puerto Rico and the Distrito T-Mobile dining and nightlife district are all minutes away.', link: [P + 'amenities#destinations', 'Nearby destinations'] },
+    { id: 'airport', q: 'How far is the airport?', k: ['airport', 'sju', 'transfer', 'transport', 'taxi', 'shuttle'],
+      a: 'Luis Mu\u00f1oz Mar\u00edn International Airport (SJU) is about 15 minutes away by car. Our concierge can arrange airport transfers and car rentals.' },
+    { id: 'dining', q: 'Is breakfast or dining included?', k: ['breakfast', 'included', 'meal', 'restaurant', 'lunch', 'dinner'],
+      a: 'Meals aren\u2019t included by default. Our in-house private chef prepares everything from breakfast to multi-course dinners on request, priced per service, and the suites include equipped kitchens if you\u2019d rather cook.', link: [P + 'amenities', 'See amenities'] },
+    { id: 'corporate', q: 'Do you host corporate retreats?', k: ['corporate', 'company', 'retreat', 'offsite', 'meeting', 'team'],
+      a: 'Yes. A full-hotel buyout gives your team oceanfront meeting spaces, sixteen suites for up to 38 people, an in-house chef and beach activities steps away.', link: [P + 'corporate', 'See corporate'] },
+    { id: 'family', q: 'Is it good for families and groups?', k: ['family', 'kids', 'children', 'group', 'friends', 'connecting'],
+      a: 'Very. There are rooms with two King beds that are perfect for families, connecting rooms, two pools and gardens, and the whole hotel sleeps up to 38 guests.', link: [P + 'rooms', 'See the suites'] },
     { id: 'pets', q: 'Are pets allowed?', k: ['pet', 'dog', 'cat', 'animal'],
       a: 'No, the hotel is not pet-friendly.' },
     { id: 'checkin', q: 'Check-in and check-out times?', k: ['check', 'checkin', 'checkout', 'arrival', 'time', 'early', 'late'],
@@ -55,13 +83,15 @@
     hi: '¡Hola! Soy el concierge digital de Villa Azure. Elige una pregunta, o escribe la tuya:',
     more: '¿Algo más?', typed_ph: 'Escribe tu pregunta…',
     nomatch: 'Buena pregunta — no tengo esa respuesta a la mano, pero nuestro equipo sí. Tocá abajo y te contestamos por WhatsApp.',
-    wa: 'Continuar en WhatsApp', open: 'Preguntas', close: 'Cerrar chat'
+    wa: 'Continuar en WhatsApp', open: 'Preguntas', close: 'Cerrar chat',
+    lead: 'O déjanos tu correo y te respondemos:', lead_ph: 'tucorreo@email.com', lead_btn: 'Enviar', lead_ok: 'Listo, te responderemos a {email} pronto.'
   } : {
     title: 'Villa Azure Concierge', sub: 'Instant answers',
     hi: 'Hi! I’m the Villa Azure digital concierge. Tap a question, or type your own:',
     more: 'Anything else?', typed_ph: 'Type your question…',
     nomatch: 'Great question — I don’t have that answer on hand, but our team does. Tap below and we’ll reply on WhatsApp.',
-    wa: 'Continue on WhatsApp', open: 'Questions', close: 'Close chat'
+    wa: 'Continue on WhatsApp', open: 'Questions', close: 'Close chat',
+    lead: 'Or leave your email and we’ll get back to you:', lead_ph: 'you@email.com', lead_btn: 'Send', lead_ok: 'Got it — we’ll reply to {email} soon.'
   };
 
   function log(ev, params) {
@@ -77,6 +107,7 @@
         event: ev,
         question: (params && params.chat_question) || '',
         text: (params && params.chat_text) || '',
+        email: (params && params.chat_email) || '',
         lang: ES ? 'es' : 'en',
         page: location.pathname
       });
@@ -117,6 +148,10 @@
     '.vz-in input{flex:1;border:none;padding:14px 16px;font-size:14.5px;font-family:inherit;background:transparent;outline:none;color:#23201B;}' +
     '.vz-in button{background:none;border:none;color:#A9744F;font-size:18px;padding:0 18px;cursor:pointer;}' +
     '.vz-wa{display:inline-block;background:#25D366;color:#fff;border-radius:30px;padding:9px 17px;font-size:13.5px;text-decoration:none;margin-top:8px;}' +
+    '.vz-leadin{margin-top:12px;font-size:13px;color:#7A6F5E;}' +
+    '.vz-lead{display:flex;gap:6px;margin-top:6px;}' +
+    '.vz-lead input{flex:1;border:1px solid #DBD1C0;border-radius:8px;padding:7px 10px;font-size:13.5px;font-family:inherit;background:#FDFBF7;}' +
+    '.vz-lead button{border:none;border-radius:8px;background:#A9744F;color:#fff;padding:7px 14px;font-size:13px;cursor:pointer;}' +
     '@media(max-width:600px){.vz-launch{right:16px;bottom:88px;padding:12px 18px;}.vz-panel{right:16px;bottom:88px;}}';
 
   var style = document.createElement('style');
@@ -206,7 +241,18 @@
     } else {
       log('chat_typed_unmatched', { chat_text: text.slice(0, 120) });
       setTimeout(function () {
-        el('vz-msg', T.nomatch + '<br><a class="vz-wa" href="' + waLink + '?text=' + encodeURIComponent(text) + '" target="_blank" rel="noopener">' + T.wa + '</a>');
+        var m = el('vz-msg', T.nomatch + '<br><a class="vz-wa" href="' + waLink + '?text=' + encodeURIComponent(text) + '" target="_blank" rel="noopener">' + T.wa + '</a>' +
+          '<div class="vz-leadin">' + T.lead + '</div>' +
+          '<form class="vz-lead"><input type="email" required placeholder="' + T.lead_ph + '"><button type="submit">' + T.lead_btn + '</button></form>');
+        m.querySelector('.vz-lead').addEventListener('submit', function (e2) {
+          e2.preventDefault();
+          var em = e2.target.querySelector('input').value.trim();
+          if (!em) return;
+          log('chat_lead', { chat_text: text.slice(0, 120), chat_email: em });
+          e2.target.previousElementSibling.style.display = 'none';
+          e2.target.style.display = 'none';
+          el('vz-msg', T.lead_ok.replace('{email}', em));
+        });
       }, 250);
     }
   });
