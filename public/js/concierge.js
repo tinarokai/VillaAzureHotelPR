@@ -8,7 +8,7 @@
   } catch (e) {}
   var ES = (document.documentElement.lang || 'en').indexOf('es') === 0;
   var waLink = (document.querySelector('.wa') || {}).href || 'https://wa.me/17875647405';
-  var BOOK = ES ? 'https://villaazurevillaparadiso.guestybookings.com/es' : 'https://villaazurevillaparadiso.guestybookings.com/en';
+  var BOOK = ES ? 'https://villaazurehotel.guestybookings.com/es' : 'https://villaazurehotel.guestybookings.com/en';
   var P = ES ? '/es/' : '/';
 
   var FAQ = ES ? [
