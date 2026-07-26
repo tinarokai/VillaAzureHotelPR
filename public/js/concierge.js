@@ -1,5 +1,6 @@
 /* Villa Azure Concierge — preset-question chat widget (no external services) */
 (function () {
+  var API = 'https://villa-azure-concierge.pablo-974.workers.dev';
   var ES = (document.documentElement.lang || 'en').indexOf('es') === 0;
   var waLink = (document.querySelector('.wa') || {}).href || 'https://wa.me/17875647405';
   var BOOK = ES ? 'https://villaazurevillaparadiso.guestybookings.com/es' : 'https://villaazurevillaparadiso.guestybookings.com/en';
@@ -69,6 +70,31 @@
       var d = { event: ev, chat_lang: ES ? 'es' : 'en', page: location.pathname };
       for (var k in params) d[k] = params[k];
       window.dataLayer.push(d);
+    } catch (e) {}
+    try {
+      if (API.indexOf('WORKER_SUBDOMAIN') !== -1) return;
+      var payload = JSON.stringify({
+        event: ev,
+        question: (params && params.chat_question) || '',
+        text: (params && params.chat_text) || '',
+        lang: ES ? 'es' : 'en',
+        page: location.pathname
+      });
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(API + '/log', new Blob([payload], { type: 'application/json' }));
+      } else {
+        fetch(API + '/log', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true });
+      }
+    } catch (e) {}
+  }
+
+  // Remote config: the dashboard can rewrite questions/answers without a site deploy.
+  if (API.indexOf('WORKER_SUBDOMAIN') === -1) {
+    try {
+      fetch(API + '/config').then(function (r) { return r.json(); }).then(function (cfg) {
+        var list = cfg && cfg[ES ? 'es' : 'en'];
+        if (list && list.length) FAQ = list;
+      }).catch(function () {});
     } catch (e) {}
   }
 
