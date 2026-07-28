@@ -4,7 +4,22 @@
   var SID = '';
   try {
     SID = localStorage.getItem('vz_sid') || '';
-    if (!SID) { SID = Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem('vz_sid', SID); }
+    if (!SID) {
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+        SID = window.crypto.randomUUID();
+      } else if (window.crypto && window.crypto.getRandomValues) {
+        var buf = new Uint8Array(32);
+        window.crypto.getRandomValues(buf);
+        SID = '';
+        for (var bi = 0; bi < buf.length; bi++) {
+          SID += ('0' + buf[bi].toString(16)).slice(-2);
+        }
+      } else {
+        // Last-resort fallback; browsers without crypto are effectively extinct.
+        SID = Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      }
+      localStorage.setItem('vz_sid', SID);
+    }
   } catch (e) {}
   var ES = (document.documentElement.lang || 'en').indexOf('es') === 0;
   var waLink = (document.querySelector('.wa') || {}).href || 'https://wa.me/17875647405';
