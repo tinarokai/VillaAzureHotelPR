@@ -251,7 +251,7 @@
 
   function ask(f, how) {
     el('vz-user', f.q);
-    log('chat_question', { chat_question: f.id, chat_method: how });
+    log('chat_question', { chat_question: f.id, chat_text: f.q, chat_method: how });
     setTimeout(function () { answer(f); followups(f.id); }, 250);
   }
 
