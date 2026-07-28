@@ -240,6 +240,34 @@
     return d;
   }
 
+  // Safe variant: text-only content. Use for anything sourced from the remote
+  // config/replies API so a compromised worker can't inject HTML/JS.
+  function elText(cls, text) {
+    var d = document.createElement('div');
+    d.className = cls;
+    d.textContent = text == null ? '' : String(text);
+    body.appendChild(d);
+    body.scrollTop = body.scrollHeight;
+    return d;
+  }
+
+  function appendSafeLink(parent, href, label) {
+    if (!href) return;
+    var url = String(href);
+    // Only allow http(s) and same-origin relative paths — block javascript:, data:, etc.
+    var safe = /^https?:\/\//i.test(url) || url.charAt(0) === '/' || url.charAt(0) === '#';
+    if (!safe) return;
+    parent.appendChild(document.createTextNode(' '));
+    var a = document.createElement('a');
+    a.href = url;
+    a.textContent = label == null ? url : String(label);
+    if (/^https?:\/\//i.test(url)) {
+      a.target = '_blank';
+      a.rel = 'noopener';
+    }
+    parent.appendChild(a);
+  }
+
   function chips(items, label) {
     var wrap = el('vz-chips', '');
     items.forEach(function (f) {
@@ -254,18 +282,17 @@
   }
 
   function answer(f) {
-    var html = f.a;
-    if (f.link) html += ' <a href="' + f.link[0] + '"' + (f.link[0].indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '') + '>' + f.link[1] + '</a>';
-    el('vz-msg', html);
+    var d = elText('vz-msg', f.a);
+    if (f.link && f.link.length >= 2) appendSafeLink(d, f.link[0], f.link[1]);
   }
 
   function followups(except) {
-    el('vz-msg', T.more);
+    elText('vz-msg', T.more);
     chips(FAQ.filter(function (f) { return f.id !== except; }).slice(0, 4));
   }
 
   function ask(f, how) {
-    el('vz-user', f.q);
+    elText('vz-user', f.q);
     log('chat_question', { chat_question: f.id, chat_text: f.q, chat_method: how });
     setTimeout(function () { answer(f); followups(f.id); }, 250);
   }
@@ -287,7 +314,7 @@
     var text = input.value.trim();
     if (!text) return;
     input.value = '';
-    el('vz-user', text);
+    elText('vz-user', text);
     var f = match(text);
     if (f) {
       log('chat_typed_matched', { chat_text: text.slice(0, 120), chat_question: f.id });
@@ -317,7 +344,17 @@
   function renderReplies() {
     if (!panel.classList.contains('open')) return;
     for (var i = renderedReplies; i < replies.length; i++) {
-      el('vz-msg vz-reply', '<div class="who">' + T_WHO + '</div>' + replies[i].text);
+      var wrap = document.createElement('div');
+      wrap.className = 'vz-msg vz-reply';
+      var who = document.createElement('div');
+      who.className = 'who';
+      who.textContent = T_WHO;
+      wrap.appendChild(who);
+      var txt = document.createElement('div');
+      txt.textContent = replies[i] && replies[i].text != null ? String(replies[i].text) : '';
+      wrap.appendChild(txt);
+      body.appendChild(wrap);
+      body.scrollTop = body.scrollHeight;
     }
     renderedReplies = replies.length;
     try { localStorage.setItem('vz_seen', String(replies.length)); } catch (e) {}
