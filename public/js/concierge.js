@@ -22,7 +22,7 @@
     }
   } catch (e) {}
   var ES = (document.documentElement.lang || 'en').indexOf('es') === 0;
-  var waLink = (document.querySelector('.wa') || {}).href || 'https://wa.me/17875647405';
+  var waLink = (document.querySelector('.wa') || {}).href || 'https://wa.me/19549001988';
   var BOOK = ES ? 'https://villaazurehotel.guestybookings.com/es' : 'https://villaazurehotel.guestybookings.com/en';
   var P = ES ? '/es/' : '/';
 
