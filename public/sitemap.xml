@@ -235,4 +235,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/faq"/>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://villaazurehotelpr.com/es/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://villaazurehotelpr.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://villaazurehotelpr.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://villaazurehotelpr.com/faq"/>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
