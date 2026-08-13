@@ -4,8 +4,8 @@
   try { if (sessionStorage.getItem('vz_rev_off')) return; } catch (e) {}
 
   var ES = (document.documentElement.lang || 'en').indexOf('es') === 0;
-  var SRC = ES ? { airbnb: 'Huésped de Airbnb', guest: 'Reseña de huésped' }
-               : { airbnb: 'Airbnb guest', guest: 'Guest review' };
+  var SRC = ES ? { airbnb: 'Huésped de Airbnb', guest: 'Reseña de huésped', google: 'Reseña de Google' }
+               : { airbnb: 'Airbnb guest', guest: 'Guest review', google: 'Google review' };
   var MORE = ES ? 'Ver más' : 'View more';
 
   // [text, date, source]
@@ -17,11 +17,15 @@
     ['It was so nice to have immediate access to a pool and the beach, especially with kids. Plenty of towels were provided, everything was clean, and even with a group of 12 we never ran out of hot water. We came to PR for two weeks and booked three places. I wish I would have booked this one for the entire time!', 'Jun 2026', 'airbnb'],
     ['What a beautiful place. Every room is well thought out. All I brought was my toothbrush. Fabulous.', 'May 2026', 'airbnb'],
     ['This is the kind of place that makes people start planning the NEXT vacation before the current one even ends. It exceeded every expectation imaginable for our family of 13. Gorgeous, luxurious, spacious, securely gated, and somehow even more impressive in person than online. Every bedroom felt like a high-end hotel suite with en-suite bathrooms, yet it still felt warm and perfect for meaningful family time.', 'May 2026', 'airbnb'],
-    ['Our small group had the pleasure of a stay at Villa Paradiso while planning a corporate retreat, and it left us wanting so much more. Every room is beautifully furnished and thoughtfully designed, and we especially appreciated that all are en suite. We were so impressed that we booked the sister property as well. The location is unbeatable: just 10 minutes from the airport, yet nestled in the heart of the city.', 'May 2026', 'airbnb'],
+    ['Our small group had the pleasure of a stay while planning a corporate retreat, and it left us wanting so much more. Every room is beautifully furnished and thoughtfully designed, and we especially appreciated that all are en suite. We were so impressed that we booked the sister property as well. The location is unbeatable: just 10 minutes from the airport, yet nestled in the heart of the city.', 'May 2026', 'airbnb'],
     ['Was perfect for our company offsite.', 'Mar 2026', 'airbnb'],
     ['Awesome stay right next to the ocean!', 'Jul 2026', 'airbnb'],
     ['I loved the location of the villa and the ocean views. The pool was so refreshing.', '2026', 'guest'],
-    ['This place was perfect for our large group of 14. Everyone had their own space but the common areas were large and a great place to gather.', '2026', 'guest']
+    ['This place was perfect for our large group of 14. Everyone had their own space but the common areas were large and a great place to gather.', '2026', 'guest'],
+    ['The pool and bar area are one of a kind. Excellent house for large groups in San Juan. Supermarket walking distance, beach very close by, short Uber drives to all the best places in San Juan.', '2024', 'google'],
+    ['Clean, well stocked, roomy, convenient.', 'Mar 2026', 'google'],
+    ['The concierge service elevated this trip into something truly magical: ATVs through El Yunque, an incredible private catamaran charter complete with jet skis, and a bioluminescent kayaking tour our family will never forget. The absolute highlight was the private in-home chef dinner, an incredible locally sourced 7-course dinner directly at the villa. It genuinely felt like a five-star fine dining experience inside our own private resort.', '2026', 'google'],
+    ['We absolutely loved our stay here! The space is beautiful, thoughtfully designed, and filled with so many special touches that make it feel both luxurious and welcoming. The location is perfect, with the beach just steps away and stunning views right outside the window. We enjoyed every moment here and are even more excited to be having our wedding here next year.', '2026', 'google']
   ];
 
   var css = '.vz-rev{position:fixed;left:22px;bottom:22px;z-index:55;width:300px;background:rgba(42,37,31,.94);color:#EDE6DA;border-radius:12px;padding:14px 34px 13px 16px;font-family:Jost,-apple-system,Helvetica,Arial,sans-serif;box-shadow:0 10px 34px rgba(0,0,0,.3);opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;pointer-events:none;}' +
