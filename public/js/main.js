@@ -178,21 +178,79 @@ if (lightbox) {
   });
 }
 
-// Contact form (basic)
+// Contact form — submits to the site's backend, which stores the enquiry
+// and emails info@villaazurehotelpr.com.
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  const isES = document.documentElement.lang && document.documentElement.lang.toLowerCase().startsWith('es');
+  const T = isES
+    ? { sending: 'Enviando…', sent: '¡Mensaje enviado!', fail: 'Error, intente de nuevo', invalid: 'Complete los campos requeridos' }
+    : { sending: 'Sending…', sent: 'Message Sent!', fail: 'Failed — please try again', invalid: 'Please complete the required fields' };
+
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent!';
-    btn.style.background = '#25d366';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
-      btn.style.color = '';
+    const label = btn ? btn.textContent : '';
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const fd = new FormData(contactForm);
+    const name = (fd.get('name') || '').toString().trim();
+    const email = (fd.get('email') || '').toString().trim();
+    const phone = (fd.get('phone') || '').toString().trim();
+    const country = (fd.get('country') || '').toString().trim();
+    let message = (fd.get('message') || '').toString().trim();
+    if (!message) message = isES ? 'Solicitud de información desde el sitio web.' : 'Website enquiry (no message provided).';
+
+    if (!name || !email) {
+      if (btn) btn.textContent = T.invalid;
+      setTimeout(() => { if (btn) btn.textContent = label; }, 2500);
+      return;
+    }
+
+    if (btn) { btn.disabled = true; btn.textContent = T.sending; }
+
+    try {
+      const res = await fetch('/api/public/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          subject: country ? 'Contact form — ' + country : 'Contact form',
+          message: message,
+          source: window.location.pathname,
+          locale: isES ? 'es' : 'en',
+        }),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || !out.ok) throw new Error('send failed');
+
+      btn.textContent = T.sent;
+      btn.style.background = '#25d366';
+      btn.style.color = '#fff';
       contactForm.reset();
-    }, 3000);
+      setTimeout(() => {
+        btn.textContent = label;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 4000);
+    } catch (err) {
+      btn.textContent = T.fail;
+      btn.style.background = '#b3261e';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = label;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 4000);
+    }
   });
 }
 
