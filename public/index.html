@@ -132,8 +132,8 @@
 
   <!-- Hero -->
   <section class="hero">
-    <video class="hero-video" src="assets/video/hero-mobile-autoplay.mp4" data-mobile-src="assets/video/hero-mobile-autoplay.mp4" data-desktop-src="assets/video/hero-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="auto" disableRemotePlayback disablePictureInPicture poster="images/2025/02/FOTO-VILLA-AZUR-1.webp"></video>
-    <script>!function(){var v=document.currentScript.previousElementSibling;if(matchMedia('(min-width:901px)').matches){v.src=v.dataset.desktopSrc;v.load();}}();</script>
+    <video class="hero-video" data-mobile-src="assets/video/hero-mobile-autoplay.mp4" data-desktop-src="assets/video/hero-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="images/2025/02/FOTO-VILLA-AZUR-1.webp"></video>
+    <script>!function(){var v=document.currentScript.previousElementSibling;v.src=matchMedia('(min-width:901px)').matches?v.dataset.desktopSrc:v.dataset.mobileSrc;v.load();}();</script>
     <div class="hero-in">
       <span class="lbl">Beachfront · Ocean Park, San Juan</span>
       <h1>Some mornings you wake up.<br>Others, the ocean wakes you.</h1>
@@ -182,9 +182,7 @@
 
   <!-- Beach band -->
   <section class="band band--wide reveal">
-    <video autoplay muted defaultmuted loop playsinline webkit-playsinline preload="auto" poster="assets/paradiso/destination-pool-view.webp">
-      <source src="assets/video/villa-paradiso-hd.mp4" type="video/mp4">
-    </video>
+    <video data-src="assets/video/villa-paradiso-hd.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="assets/paradiso/destination-pool-view.webp"></video>
   </section>
 
   <!-- Experiences mosaic -->
@@ -205,9 +203,7 @@
 
   <!-- Video band -->
   <section class="band reveal">
-    <video autoplay muted defaultmuted loop playsinline webkit-playsinline preload="auto" poster="images/2024/12/Exclusive-Villa-34.webp">
-      <source src="assets/video/villa-azure-web-1.mp4" type="video/mp4">
-    </video>
+    <video data-src="assets/video/villa-azure-web-1.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="images/2024/12/Exclusive-Villa-34.webp"></video>
     <h2>Come find your rhythm by the sea.</h2>
   </section>
 
@@ -362,9 +358,31 @@
     // reveal
     const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0,rootMargin:'0px 0px -60px 0px'});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // Band videos: hold off the download until the section is near the viewport.
+    // (autoplay overrides preload="none", so the src itself has to be withheld.)
+    (function(){
+      const lazyVids = document.querySelectorAll('video[data-src]');
+      if (!lazyVids.length) return;
+      const vio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const v = e.target;
+          vio.unobserve(v);
+          v.src = v.dataset.src;
+          v.setAttribute('autoplay','');
+          v.autoplay = true;
+          v.load();
+          const play = () => v.play().catch(() => {});
+          v.addEventListener('canplay', play, { once: true });
+          play();
+        });
+      }, { rootMargin: '600px 0px' });
+      lazyVids.forEach((v) => vio.observe(v));
+    })();
     // mobile video autoplay
     function playVideos(){
       document.querySelectorAll('video').forEach((v)=>{
+        if(v.dataset.src&&!v.getAttribute('src'))return; // not activated yet
         v.muted=true; v.defaultMuted=true; v.playsInline=true; v.autoplay=true;
         v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
         if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-mobile-autoplay.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}

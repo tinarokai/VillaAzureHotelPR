@@ -122,7 +122,7 @@
         <div>
           <span class="lbl">Send Us a Message</span>
           <h2 style="margin-bottom:32px;">Start the conversation</h2>
-          <form id="contactForm" class="lux-form" action="#" method="post">
+          <form id="contactForm" class="lux-form" novalidate>
             <div class="row">
               <div>
                 <label for="name">Full Name</label>
@@ -222,6 +222,63 @@
     // reveal
     const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0,rootMargin:'0px 0px -60px 0px'});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+  <script>
+    // Contact form -> site backend (stores the enquiry + emails info@villaazurehotelpr.com)
+    (function(){
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+      const isES = (document.documentElement.lang || '').toLowerCase().startsWith('es');
+      const T = isES
+        ? { sending:'Enviando\u2026', sent:'\u00a1Mensaje enviado!', fail:'Error, intente de nuevo' }
+        : { sending:'Sending\u2026', sent:'Message sent', fail:'Failed \u2014 please try again' };
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        const btn = form.querySelector('button[type="submit"]');
+        const label = btn ? btn.textContent : '';
+        const restore = () => {
+          if (!btn) return;
+          btn.textContent = label; btn.style.background = ''; btn.style.color = ''; btn.disabled = false;
+        };
+
+        const fd = new FormData(form);
+        const val = (k) => (fd.get(k) || '').toString().trim();
+        const country = val('country');
+        let message = val('message');
+        if (!message) message = isES ? 'Solicitud de informaci\u00f3n desde el sitio web.' : 'Website enquiry (no message provided).';
+
+        if (btn) { btn.disabled = true; btn.textContent = T.sending; }
+
+        try {
+          const res = await fetch('/api/public/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: val('name'),
+              email: val('email'),
+              phone: val('phone'),
+              subject: country ? 'Contact form \u2014 ' + country : 'Contact form',
+              message: message,
+              source: window.location.pathname,
+              locale: isES ? 'es' : 'en'
+            })
+          });
+          const out = await res.json().catch(() => ({}));
+          if (!res.ok || !out.ok) throw new Error('send failed');
+
+          if (btn) { btn.textContent = T.sent; btn.style.background = '#2a6f51'; btn.style.color = '#fff'; }
+          form.reset();
+          if (window.dataLayer) window.dataLayer.push({ event: 'contact_form_success' });
+          setTimeout(restore, 4000);
+        } catch (err) {
+          if (btn) { btn.textContent = T.fail; btn.style.background = '#a82c26'; btn.style.color = '#fff'; }
+          setTimeout(restore, 4000);
+        }
+      });
+    })();
   </script>
   <script src="js/concierge.js?v=5" defer></script>
   <script src="js/reviews.js?v=4" defer></script>
