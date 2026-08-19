@@ -324,3 +324,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 @media (prefers-reduced-motion:reduce){
   .gallery-lux img{transition:none;}
 }
+
+/* ---- Skip to content ---- */
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:10000;
+  background:var(--ink,#23201b);color:#fff;
+  padding:12px 20px;font-family:var(--cond);font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+}
+.skip-link:focus{left:8px;top:8px;outline:2px solid #fff;outline-offset:2px;}
