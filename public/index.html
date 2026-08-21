@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&family=Saira+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/lux.css?v=6">
+  <link rel="stylesheet" href="css/lux.css?v=7">
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -432,8 +432,10 @@
     function playVideos(){
       document.querySelectorAll('video').forEach((v)=>{
         if(v.dataset.src&&!v.getAttribute('src'))return; // not activated yet
-        v.muted=true; v.defaultMuted=true; v.playsInline=true; v.autoplay=true;
-        v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
+        const wantsSound = v.dataset.userAudio==='on';
+        if(!wantsSound){ v.muted=true; v.defaultMuted=true; v.setAttribute('muted',''); }
+        v.playsInline=true; v.autoplay=true;
+        v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
         if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-mobile-autoplay.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
         const play=()=>v.play().catch(()=>{});
         if(v.readyState<2){v.addEventListener('loadedmetadata',play,{once:true});v.addEventListener('canplay',play,{once:true});}
@@ -442,30 +444,32 @@
     }
     const SOUND_ON_LABEL='Sound On', SOUND_OFF_LABEL='Sound Off';
 
-    // Hero sound: browsers require autoplay to start muted, so we offer an opt-in
-    // soundtrack. Drop a licensed loop at the path below and the button appears.
-    const HERO_AUDIO = ''; // e.g. 'assets/audio/hero-loop.mp3'
+    // Hero sound. The video carries the licensed music bed, but browsers only
+    // allow autoplay while muted, so it starts silent and this unmutes it on a
+    // real click. Volume is ramped so it fades up rather than slamming on.
     (function(){
       const btn = document.getElementById('soundBtn');
-      if(!btn || !HERO_AUDIO) return;
-      const a = new Audio(HERO_AUDIO);
-      a.loop = true; a.preload = 'none'; a.volume = 0;
+      const hero = document.querySelector('.hero-video');
+      if(!btn || !hero) return;
       btn.setAttribute('data-ready','');
       let on = false, fade;
       const ramp = (to)=>{ clearInterval(fade); fade = setInterval(()=>{
-        const d = to - a.volume;
-        if(Math.abs(d) < .04){ a.volume = to; clearInterval(fade); if(to===0) a.pause(); return; }
-        a.volume = Math.max(0, Math.min(1, a.volume + d*0.12));
+        const d = to - hero.volume;
+        if(Math.abs(d) < .04){ hero.volume = to; clearInterval(fade); if(to===0) hero.muted = true; return; }
+        hero.volume = Math.max(0, Math.min(1, hero.volume + d*0.14));
       }, 40); };
-      btn.addEventListener('click', ()=>{
+      btn.addEventListener('click', (e)=>{
+        e.stopPropagation();
         on = !on;
+        hero.dataset.userAudio = on ? 'on' : 'off';
         btn.classList.toggle('is-on', on);
         btn.setAttribute('aria-pressed', String(on));
         btn.setAttribute('aria-label', on ? 'Turn hero sound off' : 'Turn hero sound on');
         btn.querySelector('.txt').textContent = on ? SOUND_OFF_LABEL : SOUND_ON_LABEL;
-        if(on){ a.play().then(()=>ramp(.45)).catch(()=>{}); } else { ramp(0); }
+        if(on){ hero.volume = 0; hero.muted = false; hero.play().catch(()=>{}); ramp(.55); }
+        else { ramp(0); }
       });
-      addEventListener('pagehide', ()=>{ a.pause(); });
+      addEventListener('pagehide', ()=>{ hero.muted = true; });
     })();
 
     playVideos(); addEventListener('load',playVideos); ['touchstart','pointerdown','scroll','click'].forEach(e=>addEventListener(e,playVideos,{once:true,passive:true}));
