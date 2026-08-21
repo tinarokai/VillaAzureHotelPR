@@ -118,6 +118,19 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 .band--wide{width:100%;height:auto;aspect-ratio:3/2;min-height:420px;}
 .band--wide::after{background:linear-gradient(180deg,rgba(35,32,27,.20),rgba(35,32,27,.46));}
 
+/* Portrait triptych. A 9:16 clip cannot fill a wide band and still show the
+   whole frame, so instead of cropping one clip we run three side by side, each
+   in its own 9:16 frame. Nothing is cut and the band still spans the page. */
+.band--trip{height:auto;min-height:0;aspect-ratio:auto;display:block;position:relative;background:var(--espresso);}
+.band--trip .trip{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.band--trip .trip video{position:static;inset:auto;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;display:block;}
+.band--trip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,32,27,.14),rgba(35,32,27,.52));pointer-events:none;}
+.band--trip h2{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;max-width:900px;z-index:3;}
+@media(max-width:900px){
+  .band--trip .trip{grid-template-columns:1fr;gap:0;}
+  .band--trip .trip video.v2,.band--trip .trip video.v3{display:none;}
+}
+
 /* mosaic */
 .mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:26px;margin-top:76px;}
 .tile{position:relative;overflow:hidden;}
