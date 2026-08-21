@@ -137,9 +137,11 @@
     <script>!function(){var v=document.currentScript.previousElementSibling;v.src=matchMedia('(min-width:901px)').matches?v.dataset.desktopSrc:v.dataset.mobileSrc;v.load();}();</script>
     <div class="hero-in">
       <span class="lbl">Beachfront · Ocean Park, San Juan</span>
-      <h1>Some mornings you wake up.<br>Others, the ocean wakes you.</h1>
+      <h1><span class="hl">Some mornings you wake up.</span><span class="hl">Others, the ocean wakes you.</span></h1>
       <div class="cue"><a href="#collection" class="link">Discover the Hotel</a></div>
     </div>
+    <button class="sound-btn" id="soundBtn" type="button" aria-pressed="false" aria-label="Turn hero sound on"><span class="ico" aria-hidden="true">&#9835;</span><span class="txt">Sound On</span></button>
+    <div class="hero-scroll" aria-hidden="true"></div>
   </section>
 
 
@@ -226,13 +228,18 @@
         </div>
       </div>
       <div class="split alt reveal">
-        <div class="ph"><img src="assets/paradiso/the-coastal-dining-room.webp" alt="In-house private chef at Villa Azure Hotel"></div>
+        <div class="ph"><img src="assets/dining/chef-plating.webp" alt="The in-house chef plating a course at Villa Azure Hotel"></div>
         <div>
           <span class="lbl">In-House Private Chef</span>
           <h2>Dining, without leaving home</h2>
           <p>Our in-house chef designs gourmet menus around your tastes, from a relaxed poolside breakfast to an elegant multi-course dinner in the oceanfront dining room. Tell us your cravings.</p>
           <a href="contact" class="link">Request the Chef</a>
         </div>
+      </div>
+      <div class="strip reveal">
+        <figure><img src="assets/dining/dish-catch-of-the-day.webp" alt="Catch of the day plated by the in-house chef" loading="lazy"></figure>
+        <figure><img src="assets/dining/dish-shrimp.webp" alt="Caribbean shrimp course from the chef's table menu" loading="lazy"></figure>
+        <figure><img src="assets/dining/dish-caribbean.webp" alt="Local seafood and black beans, plated for the chef's table" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -241,7 +248,7 @@
   <section class="sec">
     <div class="wrap">
       <div class="split alt reveal">
-        <div class="ph"><img src="assets/paradiso/the-garden-pavilion.webp" alt="Oceanfront wedding pavilion at Villa Azure Hotel"></div>
+        <div class="ph"><img src="images/2026/05/wedding-floral-arch.jpg" alt="Wedding ceremony arch set up in the oceanfront garden at Villa Azure Hotel"></div>
         <div>
           <span class="lbl">Weddings</span>
           <h2>Your whole-hotel oceanfront wedding</h2>
@@ -254,6 +261,45 @@
           </ul>
           <a href="weddings" class="link">Plan Your Wedding</a>
         </div>
+      </div>
+      <div class="strip strip--wide reveal">
+        <figure><img src="assets/experiences/wedding-bride-groom-palms.jpg" alt="Bride and groom by the ocean in Ocean Park, San Juan" loading="lazy"></figure>
+        <figure><img src="assets/experiences/wedding-carry-bride.jpg" alt="Bride in a long veil at the water's edge" loading="lazy"></figure>
+        <figure><img src="images/2026/05/wedding-celebration-group.jpg" alt="Wedding party celebrating in the oceanfront garden at Villa Azure Hotel" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retreats & Groups -->
+  <section class="sec sec--sand">
+    <div class="wrap">
+      <div class="center-head reveal">
+        <span class="lbl">Retreats &amp; Groups</span>
+        <h2>Three reasons a whole group takes the hotel</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="segments reveal">
+        <article class="segment">
+          <div class="ph"><img src="assets/common/dining-marble-ocean.webp" alt="The long marble table with an ocean view, set for a working session" loading="lazy"></div>
+          <span class="lbl">Corporate</span>
+          <h3>Offsites with the ocean in the room</h3>
+          <p>Take the whole hotel. Sixteen suites, oceanfront lawns and terraces for sessions, a private chef for every meal, and San Juan ten minutes away.</p>
+          <a href="corporate" class="link">Corporate Retreats</a>
+        </article>
+        <article class="segment">
+          <div class="ph"><img src="assets/experiences/spa-stones.jpg" alt="In-suite spa treatment at Villa Azure Hotel" loading="lazy"></div>
+          <span class="lbl">Spa &amp; Wellness</span>
+          <h3>The spa comes to your suite</h3>
+          <p>Massage therapists in your room, yoga on the garden lawn at sunrise, and a chef who will build the week's menu around how your group wants to feel.</p>
+          <a href="spa" class="link">Spa &amp; Wellness</a>
+        </article>
+        <article class="segment">
+          <div class="ph"><img src="assets/experiences/kitesurf-action.jpg" alt="Kitesurfing off Ocean Park Beach in San Juan" loading="lazy"></div>
+          <span class="lbl">Kitesurfing</span>
+          <h3>San Juan's kite beach, at the gate</h3>
+          <p>Ocean Park is where San Juan kites, and the launch is steps from the garden. Rig up in the morning, come back for lunch, go again on the afternoon trades.</p>
+          <a href="kitesurfing" class="link">Kitesurfing</a>
+        </article>
       </div>
     </div>
   </section>
@@ -393,6 +439,34 @@
         play(); setTimeout(play,400); setTimeout(play,1200);
       });
     }
+    const SOUND_ON_LABEL='Sound On', SOUND_OFF_LABEL='Sound Off';
+
+    // Hero sound: browsers require autoplay to start muted, so we offer an opt-in
+    // soundtrack. Drop a licensed loop at the path below and the button appears.
+    const HERO_AUDIO = ''; // e.g. 'assets/audio/hero-loop.mp3'
+    (function(){
+      const btn = document.getElementById('soundBtn');
+      if(!btn || !HERO_AUDIO) return;
+      const a = new Audio(HERO_AUDIO);
+      a.loop = true; a.preload = 'none'; a.volume = 0;
+      btn.setAttribute('data-ready','');
+      let on = false, fade;
+      const ramp = (to)=>{ clearInterval(fade); fade = setInterval(()=>{
+        const d = to - a.volume;
+        if(Math.abs(d) < .04){ a.volume = to; clearInterval(fade); if(to===0) a.pause(); return; }
+        a.volume = Math.max(0, Math.min(1, a.volume + d*0.12));
+      }, 40); };
+      btn.addEventListener('click', ()=>{
+        on = !on;
+        btn.classList.toggle('is-on', on);
+        btn.setAttribute('aria-pressed', String(on));
+        btn.setAttribute('aria-label', on ? 'Turn hero sound off' : 'Turn hero sound on');
+        btn.querySelector('.txt').textContent = on ? SOUND_OFF_LABEL : SOUND_ON_LABEL;
+        if(on){ a.play().then(()=>ramp(.45)).catch(()=>{}); } else { ramp(0); }
+      });
+      addEventListener('pagehide', ()=>{ a.pause(); });
+    })();
+
     playVideos(); addEventListener('load',playVideos); ['touchstart','pointerdown','scroll','click'].forEach(e=>addEventListener(e,playVideos,{once:true,passive:true}));
   </script>
   <script src="js/concierge.js?v=5" defer></script>
