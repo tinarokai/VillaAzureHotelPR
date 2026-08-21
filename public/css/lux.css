@@ -392,7 +392,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 .strip figure.tall{grid-column:span 5;grid-row:span 2;}
 .strip figure.wide{grid-column:span 7;aspect-ratio:16/10;}
 @media(max-width:900px){
-  .strip{grid-template-columns:1fr;gap:18px;margin-top:64px;}
-  .strip figure.tall{grid-column:auto;grid-row:auto;aspect-ratio:4/5;}
-  .strip figure.wide{grid-column:auto;}
+  .strip{grid-template-columns:1fr;gap:14px;margin-top:64px;}
+  .strip figure.tall,.strip figure.wide{grid-column:auto;grid-row:auto;aspect-ratio:auto;}
+  .strip img{height:auto;}
 }
