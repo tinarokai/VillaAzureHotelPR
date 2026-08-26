@@ -133,7 +133,7 @@
 
   <!-- Hero -->
   <section id="main" class="hero">
-    <video class="hero-video" data-mobile-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-union-mobile.mp4" data-desktop-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-union-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-union-poster.webp"></video>
+    <video class="hero-video" data-mobile-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-mobile.mp4" data-desktop-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-poster.webp"></video>
     <script>!function(){var v=document.currentScript.previousElementSibling;v.src=matchMedia('(min-width:901px)').matches?v.dataset.desktopSrc:v.dataset.mobileSrc;v.load();}();</script>
     <div class="hero-in">
       <span class="lbl">Beachfront · Ocean Park, San Juan</span>
@@ -436,7 +436,7 @@
         if(!wantsSound){ v.muted=true; v.defaultMuted=true; v.setAttribute('muted',''); }
         v.playsInline=true; v.autoplay=true;
         v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
-        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-union-mobile.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
+        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-azure-first-mobile.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
         const play=()=>v.play().catch(()=>{});
         if(v.readyState<2){v.addEventListener('loadedmetadata',play,{once:true});v.addEventListener('canplay',play,{once:true});}
         play(); setTimeout(play,400); setTimeout(play,1200);
