@@ -133,7 +133,7 @@
 
   <!-- Hero -->
   <section id="main" class="hero">
-    <video class="hero-video" data-mobile-src="assets/video/hero-mobile-autoplay.mp4" data-desktop-src="assets/video/hero-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="assets/video/hero-poster.webp"></video>
+    <video class="hero-video" data-mobile-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-union-mobile.mp4" data-desktop-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-union-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-union-poster.webp"></video>
     <script>!function(){var v=document.currentScript.previousElementSibling;v.src=matchMedia('(min-width:901px)').matches?v.dataset.desktopSrc:v.dataset.mobileSrc;v.load();}();</script>
     <div class="hero-in">
       <span class="lbl">Beachfront · Ocean Park, San Juan</span>
@@ -184,14 +184,10 @@
   </section>
 
   <!-- Beach band -->
-  <section class="band band--trip reveal">
-    <div class="trip">
-      <video class="v1" data-src="assets/video/azure-a.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="assets/video/azure-a-poster.webp"></video>
-      <video class="v2" data-src="assets/video/azure-b.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="assets/video/azure-b-poster.webp"></video>
-      <video class="v3" data-src="assets/video/azure-c.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="assets/video/azure-c-poster.webp"></video>
-    </div>
-    <h2>Where the island comes indoors.</h2>
-  </section>
+  <section class="band reveal">
+      <video data-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/band-paradiso.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/band-paradiso-poster.webp"></video>
+      <h2>Where the island comes indoors.</h2>
+    </section>
 
   <!-- Experiences mosaic -->
   <section class="sec">
@@ -211,7 +207,7 @@
 
   <!-- Video band -->
   <section class="band reveal">
-    <video data-src="assets/video/band-villa-azure-life.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="assets/video/band-villa-azure-life-poster.webp"></video>
+    <video data-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/band-parque-barbosa.mp4" muted defaultmuted loop playsinline webkit-playsinline preload="none" poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/band-parque-barbosa-poster.webp"></video>
     <h2>Come find your rhythm by the sea.</h2>
   </section>
 
@@ -440,7 +436,7 @@
         if(!wantsSound){ v.muted=true; v.defaultMuted=true; v.setAttribute('muted',''); }
         v.playsInline=true; v.autoplay=true;
         v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
-        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-mobile-autoplay.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
+        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-union-mobile.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
         const play=()=>v.play().catch(()=>{});
         if(v.readyState<2){v.addEventListener('loadedmetadata',play,{once:true});v.addEventListener('canplay',play,{once:true});}
         play(); setTimeout(play,400); setTimeout(play,1200);
