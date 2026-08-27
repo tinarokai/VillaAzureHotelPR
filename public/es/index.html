@@ -135,8 +135,8 @@
 
   <!-- Hero -->
   <section id="main" class="hero">
-    <video class="hero-video" data-mobile-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-mobile.mp4" data-desktop-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-poster.webp"></video>
-    <script>!function(){var v=document.currentScript.previousElementSibling;v.src=matchMedia('(min-width:901px)').matches?v.dataset.desktopSrc:v.dataset.mobileSrc;v.load();}();</script>
+    <video class="hero-video" data-mobile-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-paradiso-mobile.mp4" data-desktop-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-paradiso-desktop.mp4" autoplay muted defaultmuted loop playsinline webkit-playsinline x5-playsinline preload="metadata" disableRemotePlayback disablePictureInPicture poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/hero-azure-first-poster.webp"></video>
+    <script>!function(){var v=document.currentScript.previousElementSibling;if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.preload='none';return;}v.src=matchMedia('(min-width:901px)').matches?v.dataset.desktopSrc:v.dataset.mobileSrc;v.load();}();</script>
     <div class="hero-in">
       <span class="lbl">Frente al mar · Ocean Park, San Juan</span>
       <h1><span class="hl">Hay mañanas en que despiertas.</span><span class="hl">En otras, te despierta el mar.</span></h1>
@@ -358,7 +358,7 @@
           <p class="ci" style="margin-top:16px;opacity:.85;">Parte de Grace Collection<br><a href="https://villaazurepr.com" style="text-decoration:underline;">Villas Privadas Villa Azure</a></p>
         </div>
         <div>
-          <h5>Explorar</h5>
+          <h3 class="ft-h">Explorar</h3>
           <ul>
             <li><a href="about">El Hotel</a></li>
             <li><a href="rooms">Suites</a></li>
@@ -368,7 +368,7 @@
           </ul>
         </div>
         <div>
-          <h5>Planifica tu Estadía</h5>
+          <h3 class="ft-h">Planifica tu Estadía</h3>
           <ul>
             <li><a href="weddings">Bodas</a></li>
             <li><a href="corporate">Corporativo</a></li>
@@ -378,7 +378,7 @@
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h3 class="ft-h">Contacto</h3>
           <p class="ci">1 Calle Guerrero Noble<br>San Juan, 00913, PR</p>
           <p class="ci"><a href="tel:+19549001988">+1 (954) 900-1988</a></p>
           <p class="ci"><a href="mailto:info@villaazurehotelpr.com">info@villaazurehotelpr.com</a></p>
@@ -433,12 +433,13 @@
     // mobile video autoplay
     function playVideos(){
       document.querySelectorAll('video').forEach((v)=>{
+        if(v.classList.contains('hero-video')&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
         if(v.dataset.src&&!v.getAttribute('src'))return; // not activated yet
         const wantsSound = v.dataset.userAudio==='on';
         if(!wantsSound){ v.muted=true; v.defaultMuted=true; v.setAttribute('muted',''); }
         v.playsInline=true; v.autoplay=true;
         v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); v.setAttribute('autoplay','');
-        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-azure-first-mobile.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
+        if(v.classList.contains('hero-video')&&matchMedia('(max-width:900px)').matches&&v.currentSrc.indexOf('hero-azure-paradiso-mobile.mp4')===-1){v.src=v.dataset.mobileSrc;v.load();}
         const play=()=>v.play().catch(()=>{});
         if(v.readyState<2){v.addEventListener('loadedmetadata',play,{once:true});v.addEventListener('canplay',play,{once:true});}
         play(); setTimeout(play,400); setTimeout(play,1200);

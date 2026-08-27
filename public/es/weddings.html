@@ -122,7 +122,8 @@
 
   <!-- Page hero -->
   <section id="main" class="page-hero">
-    <video class="ph-video" data-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/ph-weddings.mp4" poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/ph-weddings-poster.webp" muted defaultmuted loop playsinline webkit-playsinline preload="none" disableRemotePlayback disablePictureInPicture aria-hidden="true"></video>
+    <video class="ph-video" data-mobile-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/ph-weddings-m.mp4" data-mobile-poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/ph-weddings-m-poster.webp" data-src="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/ph-weddings.mp4" poster="https://pub-8eef37912dab439e88d251ccf5c4979f.r2.dev/ph-weddings-poster.webp" muted defaultmuted loop playsinline webkit-playsinline preload="none" disableRemotePlayback disablePictureInPicture aria-hidden="true"></video>
+    <script>!function(){var v=document.currentScript.previousElementSibling;if(matchMedia('(max-width:900px)').matches){v.dataset.src=v.dataset.mobileSrc;v.poster=v.dataset.mobilePoster;}}();</script>
     <div class="wrap">
       <div class="page-hero-in">
         <span class="lbl">Bodas</span>
@@ -140,21 +141,21 @@
         <div class="rule"></div>
         <p style="max-width:820px;">Reserva todo el Villa Azure Hotel y haz el día completamente tuyo. Intercambia votos en los jardines privados frente al mar, celebra bajo el pabellón de cristal al aire libre y deja que tus invitados más cercanos — hasta 38 — se hospeden en el lugar, en dieciséis suites privadas. Nuestro chef privado se encarga del menú; el hotel entero es solo tuyo.</p>
       </div>
-      <div style="margin-top:70px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:26px;">
+      <div style="margin-top:70px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:26px;">
         <div style="text-align:center;padding:34px 16px;background:var(--white);border:1px solid var(--line);">
-          <div style="font-family:var(--serif);font-size:2.6rem;color:var(--clay);line-height:1;">38</div>
+          <div style="font-family:var(--serif);font-size:clamp(1.9rem,7vw,2.6rem);color:var(--clay);line-height:1;overflow-wrap:anywhere;">38</div>
           <div style="font-family:var(--cond);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);margin-top:12px;">Invitados en el Lugar</div>
         </div>
         <div style="text-align:center;padding:34px 16px;background:var(--white);border:1px solid var(--line);">
-          <div style="font-family:var(--serif);font-size:2.6rem;color:var(--clay);line-height:1;">16</div>
+          <div style="font-family:var(--serif);font-size:clamp(1.9rem,7vw,2.6rem);color:var(--clay);line-height:1;overflow-wrap:anywhere;">16</div>
           <div style="font-family:var(--cond);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);margin-top:12px;">Suites Privadas</div>
         </div>
         <div style="text-align:center;padding:34px 16px;background:var(--white);border:1px solid var(--line);">
-          <div style="font-family:var(--serif);font-size:2.6rem;color:var(--clay);line-height:1;">100%</div>
+          <div style="font-family:var(--serif);font-size:clamp(1.9rem,7vw,2.6rem);color:var(--clay);line-height:1;overflow-wrap:anywhere;">100%</div>
           <div style="font-family:var(--cond);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);margin-top:12px;">Renta Privada</div>
         </div>
         <div style="text-align:center;padding:34px 16px;background:var(--white);border:1px solid var(--line);">
-          <div style="font-family:var(--serif);font-size:2.6rem;color:var(--clay);line-height:1;">Frente al Mar</div>
+          <div style="font-family:var(--serif);font-size:clamp(1.9rem,7vw,2.6rem);color:var(--clay);line-height:1;overflow-wrap:anywhere;">Frente al Mar</div>
           <div style="font-family:var(--cond);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);margin-top:12px;">Vistas al Mar</div>
         </div>
       </div>
@@ -316,7 +317,7 @@
           <p class="ci" style="margin-top:16px;opacity:.85;">Parte de Grace Collection<br><a href="https://villaazurepr.com" style="text-decoration:underline;">Villas Privadas Villa Azure</a></p>
         </div>
         <div>
-          <h5>Explora</h5>
+          <h3 class="ft-h">Explora</h3>
           <ul>
             <li><a href="about">El Hotel</a></li>
             <li><a href="rooms">Suites</a></li>
@@ -326,7 +327,7 @@
           </ul>
         </div>
         <div>
-          <h5>Planifica tu Estadía</h5>
+          <h3 class="ft-h">Planifica tu Estadía</h3>
           <ul>
             <li><a href="weddings">Bodas</a></li>
             <li><a href="corporate">Corporativo</a></li>
@@ -336,7 +337,7 @@
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h3 class="ft-h">Contacto</h3>
           <p class="ci">1 Calle Guerrero Noble<br>San Juan, 00913, PR</p>
           <p class="ci"><a href="tel:+19549001988">+1 (954) 900-1988</a></p>
           <p class="ci"><a href="mailto:info@villaazurehotelpr.com">info@villaazurehotelpr.com</a></p>

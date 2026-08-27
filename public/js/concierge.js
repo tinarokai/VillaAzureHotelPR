@@ -215,7 +215,7 @@
   var launch = document.createElement('button');
   launch.className = 'vz-launch';
   launch.innerHTML = '&#128172;&nbsp; ' + T.open;
-  launch.setAttribute('aria-label', T.title);
+  launch.setAttribute('aria-label', T.open + ' – ' + T.title);
 
   var panel = document.createElement('div');
   panel.className = 'vz-panel';

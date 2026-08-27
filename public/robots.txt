@@ -36,4 +36,4 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://villaazurehotelpr.com/sitemap.xml
-LLMs: https://villaazurehotelpr.com/llms.txt
+# LLMs: https://villaazurehotelpr.com/llms.txt

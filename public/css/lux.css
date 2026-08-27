@@ -180,7 +180,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
 .lux-footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:48px;}
 .lux-footer .brand img{height:34px;margin-bottom:22px;}
 .lux-footer .brand p{color:rgba(204,195,179,.82);font-size:16.5px;max-width:300px;}
-.lux-footer h5{font-family:var(--cond);letter-spacing:.3em;text-transform:uppercase;font-size:13.5px;color:#efe7d8;margin-bottom:20px;font-weight:500;}
+.lux-footer h3.ft-h{font-family:var(--cond);letter-spacing:.3em;text-transform:uppercase;font-size:13.5px;color:#efe7d8;margin-bottom:20px;font-weight:500;}
 .lux-footer ul{list-style:none;}
 .lux-footer ul li{margin-bottom:12px;}
 .lux-footer ul li a{font-size:16.5px;color:rgba(204,195,179,.88);}
