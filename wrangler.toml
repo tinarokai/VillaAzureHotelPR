@@ -14,5 +14,5 @@ compatibility_date = "2026-05-07"
 [vars]
 SUPABASE_URL = "https://xewgcsmgexewehfcaslr.supabase.co"
 CF_ACCOUNT_ID = "97480f45e49cdcee83ae5545af00c36a"
-CONTACT_TO = "info@villaazurehotelpr.com"
+CONTACT_TO = "info@villaazurepr.com"
 CONTACT_FROM = "notifications@villaazurehotelpr.com"
