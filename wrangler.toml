@@ -1,18 +1,22 @@
 # Cloudflare Pages configuration for villaazurehotelpr.com.
 # The site is the static HTML in public/; functions/ holds the contact endpoint.
 #
-# Secrets (never in this file), set with `wrangler pages secret put <NAME>`:
-#   SUPABASE_SERVICE_ROLE_KEY   Supabase -> Project Settings -> API
-#   EMAIL_API_TOKEN             Cloudflare API token with the Email Sending permission
-#                               (only needed once villaazurehotelpr.com is a Cloudflare zone
-#                               and `wrangler email sending enable villaazurehotelpr.com` has run;
-#                               until then the form stores the enquiry and skips the email)
+# Deploy:      wrangler pages deploy            (git push does NOT deploy)
+# DB schema:   wrangler d1 migrations apply villa-azure-contact --remote
+# Secret:      wrangler pages secret put EMAIL_API_TOKEN --project-name villa-azure-hotel
+#              (Cloudflare API token with Email Sending: Edit; already set)
 name = "villa-azure-hotel"
 pages_build_output_dir = "public"
 compatibility_date = "2026-05-07"
 
 [vars]
-SUPABASE_URL = "https://xewgcsmgexewehfcaslr.supabase.co"
 CF_ACCOUNT_ID = "97480f45e49cdcee83ae5545af00c36a"
 CONTACT_TO = "info@villaazurepr.com"
 CONTACT_FROM = "notifications@villaazurehotelpr.com"
+
+# Contact-form submissions (backup record; the email is the primary channel).
+[[d1_databases]]
+binding = "DB"
+database_name = "villa-azure-contact"
+database_id = "be6fefc4-0a49-4859-8fa2-6f3de0d9293d"
+migrations_dir = "migrations"
