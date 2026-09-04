@@ -408,3 +408,21 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
   .strip{gap:8px;margin-top:58px;}
   .strip figure.wide{aspect-ratio:16/10;}
 }
+
+/* Bespoke Services (home): tighter rhythm than the default split + mosaic */
+.sec--services{padding:120px 0;}
+.sec--services .center-head{margin-bottom:64px;}
+.sec--services .split{gap:64px;}
+.sec--services .split + .split{margin-top:72px;}
+.sec--services .split .ph{aspect-ratio:1/1;}
+.sec--services .strip{margin-top:64px;gap:20px;}
+.sec--services .strip figure.tall,
+.sec--services .strip figure.wide{grid-column:span 4;grid-row:auto;aspect-ratio:4/5;}
+@media(max-width:900px){
+  .sec--services{padding:80px 0;}
+  .sec--services .center-head{margin-bottom:44px;}
+  .sec--services .split + .split{margin-top:52px;}
+  .sec--services .strip{margin-top:44px;gap:8px;}
+  .sec--services .strip figure.tall{grid-column:span 12;aspect-ratio:16/10;}
+  .sec--services .strip figure.wide{grid-column:span 6;aspect-ratio:1/1;}
+}
