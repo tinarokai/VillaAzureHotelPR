@@ -28,7 +28,7 @@
 
   var FAQ = ES ? [
     { id: 'location', q: '¿Dónde está el hotel?', k: ['donde', 'ubicacion', 'direccion', 'llegar', 'queda'],
-      a: 'Estamos en 1 Calle Guerrero Noble, Ocean Park, San Juan, 00913, a pasos de la playa de Ocean Park y a minutos de Condado y el Viejo San Juan.', link: [P + 'contact', 'Cómo llegar'] },
+      a: 'Estamos en 5 Calle Guerrero Noble, Ocean Park, San Juan, 00913, a pasos de la playa de Ocean Park y a minutos de Condado y el Viejo San Juan.', link: [P + 'contact', 'Cómo llegar'] },
     { id: 'book', q: '¿Cómo reservo?', k: ['reservar', 'reserva', 'precio', 'tarifa', 'disponibilidad', 'costo'],
       a: 'Reserva directo en nuestro motor de reservas, sin cargos de OTA. Si prefieres, escríbenos por WhatsApp y te ayudamos personalmente.', link: [BOOK, 'Reservar ahora'] },
     { id: 'capacity', q: '¿Cuántos huéspedes caben?', k: ['huespedes', 'personas', 'capacidad', 'suites', 'habitaciones', 'grupo'],
@@ -36,7 +36,7 @@
     { id: 'chef', q: '¿Tienen chef y concierge?', k: ['chef', 'comida', 'cocinero', 'concierge', 'cena', 'desayuno'],
       a: 'Sí. Nuestro chef privado prepara desde desayunos junto a la piscina hasta cenas frente al mar, típicamente $85–$150 por persona más los víveres según el menú. El concierge organiza tours, charters y traslados.', link: [P + 'amenities', 'Ver amenidades'] },
     { id: 'weddings', q: '¿Puedo celebrar una boda o evento?', k: ['boda', 'evento', 'celebrar', 'matrimonio', 'corporativo', 'retiro'],
-      a: 'Claro. Con renta completa del hotel tienes los jardines frente al mar, el pabellón de cristal y las 16 suites para hasta 38 invitados que se hospedan.', link: [P + 'weddings', 'Explorar bodas'] },
+      a: 'Claro. Con renta completa del hotel tienes los jardines y terrazas frente al mar y las 16 suites para hasta 38 invitados que se hospedan.', link: [P + 'weddings', 'Explorar bodas'] },
     { id: 'amenities', q: '¿Qué amenidades tienen?', k: ['amenidades', 'piscina', 'playa', 'wifi', 'estacionamiento', 'parking'],
       a: 'Dos piscinas privadas, acceso directo a la playa, terraza BBQ, cocinas equipadas, WiFi gratis y estacionamiento gratis en la propiedad.', link: [P + 'amenities', 'Ver todo'] },
     { id: 'spa', q: '¿Hay spa o masajes?', k: ['spa', 'masaje', 'yoga', 'facial', 'bienestar'],
@@ -79,7 +79,7 @@
       a: 'El check-in es a las 4:00 PM y el check-out antes de las 10:00 AM. A veces es posible entrar antes o salir más tarde según la agenda, escríbenos y tratamos de acomodarte.' }
   ] : [
     { id: 'location', q: 'Where is the hotel located?', k: ['where', 'location', 'address', 'located', 'directions', 'far'],
-      a: 'We’re at 1 Calle Guerrero Noble, Ocean Park, San Juan, 00913 — steps from Ocean Park Beach and minutes from Condado and Old San Juan.', link: [P + 'contact', 'Get in touch'] },
+      a: 'We’re at 5 Calle Guerrero Noble, Ocean Park, San Juan, 00913 — steps from Ocean Park Beach and minutes from Condado and Old San Juan.', link: [P + 'contact', 'Get in touch'] },
     { id: 'book', q: 'How do I book?', k: ['book', 'booking', 'reserve', 'price', 'rate', 'availability', 'cost'],
       a: 'Book direct through our booking engine with no OTA fees. Prefer a human? Message us on WhatsApp and we’ll help personally.', link: [BOOK, 'Book now'] },
     { id: 'capacity', q: 'How many guests can stay?', k: ['guests', 'people', 'capacity', 'suites', 'rooms', 'group', 'sleep'],
@@ -87,7 +87,7 @@
     { id: 'chef', q: 'Do you have a chef and concierge?', k: ['chef', 'food', 'dinner', 'breakfast', 'concierge', 'cook', 'meals'],
       a: 'Yes. Our private chef cooks everything from poolside breakfasts to oceanfront dinners, typically $85–$150 per person plus groceries depending on the menu. The concierge arranges tours, charters and transfers.', link: [P + 'amenities', 'See amenities'] },
     { id: 'weddings', q: 'Can we host a wedding or event?', k: ['wedding', 'event', 'marry', 'celebration', 'corporate', 'retreat', 'party'],
-      a: 'Absolutely. A full-hotel buyout gives you the oceanfront gardens, the glass pavilion and all 16 suites for up to 38 overnight guests.', link: [P + 'weddings', 'Explore weddings'] },
+      a: 'Absolutely. A full-hotel buyout gives you the oceanfront gardens, the terraces and all 16 suites for up to 38 overnight guests.', link: [P + 'weddings', 'Explore weddings'] },
     { id: 'amenities', q: 'What amenities do you have?', k: ['amenities', 'pool', 'beach', 'wifi', 'parking', 'kitchen'],
       a: 'Two private pools, direct beach access, a BBQ terrace, chef’s kitchens, free WiFi and free on-site parking.', link: [P + 'amenities', 'See everything'] },
     { id: 'spa', q: 'Is there a spa or massage?', k: ['spa', 'massage', 'yoga', 'facial', 'wellness', 'treatment'],
