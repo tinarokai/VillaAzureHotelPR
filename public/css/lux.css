@@ -202,6 +202,14 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spa
   .hdr-right{justify-self:end;gap:14px;}
   .hdr-right .pill{padding:10px 17px;font-size:11px;letter-spacing:.2em;}
   .lang-toggle{font-size:11px;letter-spacing:.18em;}
+}
+@media(max-width:480px){
+  .lux-header{padding:20px 16px;}
+  .lux-logo img{height:32px;}
+  .lux-logo .tag{font-size:7px;letter-spacing:.28em;}
+  .hdr-right{gap:9px;white-space:nowrap;}
+  .hdr-right .pill{padding:8px 11px;font-size:10px;letter-spacing:.1em;}
+  .lang-toggle{font-size:10px;letter-spacing:.1em;}
   .feature{grid-template-columns:1fr;}
   .feature .ph{height:60vh;min-height:400px;}
   .feature.alt .ph{order:0;}
