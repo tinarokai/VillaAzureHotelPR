@@ -79,7 +79,7 @@
       a: 'El check-in es a las 4:00 PM y el check-out antes de las 10:00 AM. A veces es posible entrar antes o salir más tarde según la agenda, escríbenos y tratamos de acomodarte.' }
   ] : [
     { id: 'location', q: 'Where is the hotel located?', k: ['where', 'location', 'address', 'located', 'directions', 'far'],
-      a: 'We’re at 5 Calle Guerrero Noble, Ocean Park, San Juan, 00913 — steps from Ocean Park Beach and minutes from Condado and Old San Juan.', link: [P + 'contact', 'Get in touch'] },
+      a: 'We’re at 5 Calle Guerrero Noble, Ocean Park, San Juan, 00913, steps from Ocean Park Beach and minutes from Condado and Old San Juan.', link: [P + 'contact', 'Get in touch'] },
     { id: 'book', q: 'How do I book?', k: ['book', 'booking', 'reserve', 'price', 'rate', 'availability', 'cost'],
       a: 'Book direct through our booking engine with no OTA fees. Prefer a human? Message us on WhatsApp and we’ll help personally.', link: [BOOK, 'Book now'] },
     { id: 'capacity', q: 'How many guests can stay?', k: ['guests', 'people', 'capacity', 'suites', 'rooms', 'group', 'sleep'],
@@ -91,7 +91,7 @@
     { id: 'amenities', q: 'What amenities do you have?', k: ['amenities', 'pool', 'beach', 'wifi', 'parking', 'kitchen'],
       a: 'Two private pools, direct beach access, a BBQ terrace, chef’s kitchens, free WiFi and free on-site parking.', link: [P + 'amenities', 'See everything'] },
     { id: 'spa', q: 'Is there a spa or massage?', k: ['spa', 'massage', 'yoga', 'facial', 'wellness', 'treatment'],
-      a: 'No spa walls here — we bring it to you. Licensed therapists do massages and treatments in your suite or garden, and we arrange private beach yoga. Booked via the concierge, priced per service.', link: [P + 'experiences', 'See experiences'] },
+      a: 'No spa walls here. We bring it to you. Licensed therapists do massages and treatments in your suite or garden, and we arrange private beach yoga. Booked via the concierge, priced per service.', link: [P + 'experiences', 'See experiences'] },
     { id: 'kite', q: 'Can I go kitesurfing?', k: ['kite', 'kitesurf', 'surf', 'wind', 'watersports', 'lessons'],
       a: 'Ocean Park is one of Puerto Rico’s best-known kite beaches, and the hotel sits right on it. Our concierge connects you with local schools for lessons and rentals.', link: [P + 'kitesurfing', 'More on kitesurfing'] },
     { id: 'beach', q: 'Is the hotel right on the beach?', k: ['beach', 'beachfront', 'sand', 'ocean', 'access'],
@@ -134,16 +134,16 @@
     title: 'Concierge Villa Azure', sub: 'Respuestas al instante',
     hi: '¡Hola! Soy el concierge digital de Villa Azure. Elige una pregunta, o escribe la tuya:',
     more: '¿Algo más?', typed_ph: 'Escribe tu pregunta…',
-    nomatch: 'Buena pregunta — no tengo esa respuesta a la mano, pero nuestro equipo sí. Toca abajo para escribirnos por WhatsApp, y nuestra respuesta también aparecerá aquí en este chat.',
+    nomatch: 'Buena pregunta. No tengo esa respuesta a la mano, pero nuestro equipo sí. Toca abajo para escribirnos por WhatsApp, y nuestra respuesta también aparecerá aquí en este chat.',
     wa: 'Continuar en WhatsApp', open: 'Preguntas', close: 'Cerrar chat',
     lead: 'O déjanos tu correo y te respondemos:', lead_ph: 'tucorreo@email.com', lead_btn: 'Enviar', lead_ok: 'Listo, te responderemos a {email} pronto.'
   } : {
     title: 'Villa Azure Concierge', sub: 'Instant answers',
     hi: 'Hi! I’m the Villa Azure digital concierge. Tap a question, or type your own:',
     more: 'Anything else?', typed_ph: 'Type your question…',
-    nomatch: 'Great question — I don’t have that answer on hand, but our team does. Tap below to reach us on WhatsApp, and our reply will also appear right here in this chat.',
+    nomatch: 'Great question. I don’t have that answer on hand, but our team does. Tap below to reach us on WhatsApp, and our reply will also appear right here in this chat.',
     wa: 'Continue on WhatsApp', open: 'Questions', close: 'Close chat',
-    lead: 'Or leave your email and we’ll get back to you:', lead_ph: 'you@email.com', lead_btn: 'Send', lead_ok: 'Got it — we’ll reply to {email} soon.'
+    lead: 'Or leave your email and we’ll get back to you:', lead_ph: 'you@email.com', lead_btn: 'Send', lead_ok: 'Got it. We’ll reply to {email} soon.'
   };
 
   function log(ev, params) {
