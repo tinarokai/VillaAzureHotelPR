@@ -1,4 +1,4 @@
-/* Villa Azure — cycling review toasts (bottom-left, unobtrusive). Real guest reviews. */
+/* Villa Azure: cycling review toasts (bottom-left, unobtrusive). Real guest reviews. */
 (function () {
   if (window.innerWidth < 700) return; // keep mobile clean
   try { if (sessionStorage.getItem('vz_rev_off')) return; } catch (e) {}

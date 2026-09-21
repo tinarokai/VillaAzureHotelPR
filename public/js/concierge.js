@@ -1,4 +1,4 @@
-/* Villa Azure Concierge — preset-question chat widget (no external services) */
+/* Villa Azure Concierge: preset-question chat widget (no external services) */
 (function () {
   var API = 'https://villa-azure-concierge.pablo-974.workers.dev';
   var SID = '';
@@ -254,7 +254,7 @@
   function appendSafeLink(parent, href, label) {
     if (!href) return;
     var url = String(href);
-    // Only allow http(s) and same-origin relative paths — block javascript:, data:, etc.
+    // Only allow http(s) and same-origin relative paths, block javascript:, data:, etc.
     var safe = /^https?:\/\//i.test(url) || url.charAt(0) === '/' || url.charAt(0) === '#';
     if (!safe) return;
     parent.appendChild(document.createTextNode(' '));

@@ -178,14 +178,14 @@ if (lightbox) {
   });
 }
 
-// Contact form — submits to the site's backend, which stores the enquiry
+// Contact form: submits to the site's backend, which stores the enquiry
 // and emails info@villaazurehotelpr.com.
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   const isES = document.documentElement.lang && document.documentElement.lang.toLowerCase().startsWith('es');
   const T = isES
     ? { sending: 'Enviando…', sent: '¡Mensaje enviado!', fail: 'Error, intente de nuevo', invalid: 'Complete los campos requeridos' }
-    : { sending: 'Sending…', sent: 'Message Sent!', fail: 'Failed — please try again', invalid: 'Please complete the required fields' };
+    : { sending: 'Sending…', sent: 'Message Sent!', fail: 'Failed, please try again', invalid: 'Please complete the required fields' };
 
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -221,7 +221,7 @@ if (contactForm) {
           name: name,
           email: email,
           phone: phone,
-          subject: country ? 'Contact form — ' + country : 'Contact form',
+          subject: country ? 'Contact form: ' + country : 'Contact form',
           message: message,
           source: window.location.pathname,
           locale: isES ? 'es' : 'en',
