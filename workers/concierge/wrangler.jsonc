@@ -1,0 +1,8 @@
+{
+  "name": "villa-azure-concierge",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-01",
+  "kv_namespaces": [
+    { "binding": "CHAT", "id": "560871c21e06471395054e22e4c3af0c" }
+  ]
+}

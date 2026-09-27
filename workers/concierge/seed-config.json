@@ -1,0 +1,749 @@
+{
+  "es": [
+    {
+      "id": "location",
+      "q": "¿Dónde está el hotel?",
+      "k": [
+        "donde",
+        "ubicacion",
+        "direccion",
+        "llegar",
+        "queda"
+      ],
+      "a": "Estamos en 5 Calle Guerrero Noble, Ocean Park, San Juan, 00913, a pasos de la playa de Ocean Park y a minutos de Condado y el Viejo San Juan.",
+      "link": [
+        "/es/contact",
+        "Cómo llegar"
+      ]
+    },
+    {
+      "id": "book",
+      "q": "¿Cómo reservo?",
+      "k": [
+        "reservar",
+        "reserva",
+        "precio",
+        "tarifa",
+        "disponibilidad",
+        "costo"
+      ],
+      "a": "Reserva directo en nuestro motor de reservas, sin cargos de OTA. Si prefieres, escríbenos por WhatsApp y te ayudamos personalmente.",
+      "link": [
+        "https://villaazurehotel.guestybookings.com/es",
+        "Reservar ahora"
+      ]
+    },
+    {
+      "id": "capacity",
+      "q": "¿Cuántos huéspedes caben?",
+      "k": [
+        "huespedes",
+        "personas",
+        "capacidad",
+        "suites",
+        "habitaciones",
+        "grupo"
+      ],
+      "a": "El hotel tiene 16 suites con baño privado, muchas con vista al mar, y aloja hasta 38 huéspedes. Puedes reservar una suite, varias, o el hotel completo.",
+      "link": [
+        "/es/rooms",
+        "Ver las suites"
+      ]
+    },
+    {
+      "id": "chef",
+      "q": "¿Tienen chef y concierge?",
+      "k": [
+        "chef",
+        "comida",
+        "cocinero",
+        "concierge",
+        "cena",
+        "desayuno"
+      ],
+      "a": "Sí. Nuestro chef privado prepara desde desayunos junto a la piscina hasta cenas frente al mar, típicamente $85–$150 por persona más los víveres según el menú. El concierge organiza tours, charters y traslados.",
+      "link": [
+        "/es/amenities",
+        "Ver amenidades"
+      ]
+    },
+    {
+      "id": "weddings",
+      "q": "¿Puedo celebrar una boda o evento?",
+      "k": [
+        "boda",
+        "evento",
+        "celebrar",
+        "matrimonio",
+        "corporativo",
+        "retiro"
+      ],
+      "a": "Claro. Con renta completa del hotel tienes los jardines y terrazas frente al mar y las 16 suites para hasta 38 invitados que se hospedan.",
+      "link": [
+        "/es/weddings",
+        "Explorar bodas"
+      ]
+    },
+    {
+      "id": "amenities",
+      "q": "¿Qué amenidades tienen?",
+      "k": [
+        "amenidades",
+        "piscina",
+        "playa",
+        "wifi",
+        "estacionamiento",
+        "parking"
+      ],
+      "a": "Dos piscinas privadas, acceso directo a la playa, terraza BBQ, cocinas equipadas, WiFi gratis y estacionamiento gratis en la propiedad.",
+      "link": [
+        "/es/amenities",
+        "Ver todo"
+      ]
+    },
+    {
+      "id": "spa",
+      "q": "¿Hay spa o masajes?",
+      "k": [
+        "spa",
+        "masaje",
+        "yoga",
+        "facial",
+        "bienestar"
+      ],
+      "a": "No hay spa físico: lo llevamos a ti. Terapeutas licenciados dan masajes y tratamientos en tu suite o el jardín, y organizamos yoga privado en la playa. Se coordinan con el concierge y se cotizan por servicio.",
+      "link": [
+        "/es/experiences",
+        "Ver experiencias"
+      ]
+    },
+    {
+      "id": "kite",
+      "q": "¿Se puede hacer kitesurf?",
+      "k": [
+        "kite",
+        "kitesurf",
+        "surf",
+        "viento",
+        "deportes"
+      ],
+      "a": "Ocean Park es uno de los lugares más reconocidos de Puerto Rico para el kitesurf, y estamos sobre esa misma playa. El concierge te conecta con escuelas locales para clases y alquileres.",
+      "link": [
+        "/es/kitesurfing",
+        "Más del kitesurf"
+      ]
+    },
+    {
+      "id": "beach",
+      "q": "¿El hotel está frente a la playa?",
+      "k": [
+        "playa",
+        "frente",
+        "arena",
+        "mar",
+        "acceso"
+      ],
+      "a": "Sí. El hotel es beachfront en Ocean Park, con acceso directo a la playa y dos piscinas, a pasos de la arena.",
+      "link": [
+        "/es/amenities",
+        "Ver amenidades"
+      ]
+    },
+    {
+      "id": "views",
+      "q": "¿Las suites tienen vista al mar?",
+      "k": [
+        "vista",
+        "vistas",
+        "balcon",
+        "ocean view"
+      ],
+      "a": "Muchas de las dieciséis suites tienen vista al mar o a la piscina, incluyendo la Suite Queen Vista al Mar y la Gran Suite Vista al Mar, el alojamiento insignia del hotel.",
+      "link": [
+        "/es/rooms",
+        "Ver las suites"
+      ]
+    },
+    {
+      "id": "nearby",
+      "q": "¿Qué hay para hacer cerca?",
+      "k": [
+        "cerca",
+        "hacer",
+        "atracciones",
+        "visitar",
+        "turismo",
+        "viejo san juan",
+        "condado"
+      ],
+      "a": "La playa de Ocean Park está al frente; el Viejo San Juan (reconocido por la UNESCO), la Laguna del Condado para kayak, el Museo de Arte de Puerto Rico y el Distrito T-Mobile con restaurantes y música en vivo quedan a minutos.",
+      "link": [
+        "/es/amenities#destinations",
+        "Destinos cercanos"
+      ]
+    },
+    {
+      "id": "airport",
+      "q": "¿Qué tan lejos está el aeropuerto?",
+      "k": [
+        "aeropuerto",
+        "sju",
+        "traslado",
+        "transporte",
+        "taxi",
+        "llegar"
+      ],
+      "a": "El aeropuerto internacional Luis Muñoz Marín (SJU) está a solo unos 10 minutos en auto. Uber funciona bien para grupos pequeños, y podemos coordinar choferes privados para grupos grandes o llegadas nocturnas."
+    },
+    {
+      "id": "dining",
+      "q": "¿El desayuno o las comidas están incluidas?",
+      "k": [
+        "desayuno",
+        "comida",
+        "incluido",
+        "restaurante",
+        "cena",
+        "almuerzo"
+      ],
+      "a": "Las comidas no están incluidas por defecto. Nuestro chef privado prepara desde desayunos hasta cenas de varios tiempos, a solicitud y con precio por servicio, y las suites cuentan con cocinas equipadas si prefieres cocinar.",
+      "link": [
+        "/es/amenities",
+        "Ver amenidades"
+      ]
+    },
+    {
+      "id": "corporate",
+      "q": "¿Reciben retiros corporativos?",
+      "k": [
+        "corporativo",
+        "empresa",
+        "retiro",
+        "offsite",
+        "reunion",
+        "equipo"
+      ],
+      "a": "Sí. Con renta completa del hotel tu equipo tiene espacios de reunión frente al mar, dieciséis suites para hasta 38 personas, chef privado y actividades de playa a pasos.",
+      "link": [
+        "/es/corporate",
+        "Ver corporativo"
+      ]
+    },
+    {
+      "id": "family",
+      "q": "¿Es bueno para familias y grupos?",
+      "k": [
+        "familia",
+        "ninos",
+        "grupo",
+        "amigos",
+        "conectadas"
+      ],
+      "a": "Sí. Hay habitaciones con dos camas King perfectas para familias, habitaciones conectadas, dos piscinas y jardines, y el hotel completo aloja hasta 38 huéspedes.",
+      "link": [
+        "/es/rooms",
+        "Ver las suites"
+      ]
+    },
+    {
+      "id": "minstay",
+      "q": "¿Hay estadía mínima?",
+      "k": [
+        "minimo",
+        "minima",
+        "noches",
+        "una noche",
+        "fin de semana"
+      ],
+      "a": "Las estadías suelen tener un mínimo de 5 noches. Para estadías más cortas o fechas específicas, escríbenos por WhatsApp y vemos qué es posible."
+    },
+    {
+      "id": "poolheat",
+      "q": "¿La piscina es climatizada?",
+      "k": [
+        "climatizada",
+        "caliente",
+        "temperatura",
+        "fria"
+      ],
+      "a": "Sí, la piscina es climatizada y se mantiene a unos agradables 86°F (30°C) todo el año."
+    },
+    {
+      "id": "ac",
+      "q": "¿Las suites tienen aire acondicionado?",
+      "k": [
+        "aire",
+        "acondicionado",
+        "ac",
+        "abanico",
+        "calor"
+      ],
+      "a": "Sí, cada suite tiene su propio aire acondicionado, y las áreas comunes cuentan con aire central."
+    },
+    {
+      "id": "smoking",
+      "q": "¿Se permite fumar?",
+      "k": [
+        "fumar",
+        "cigarro",
+        "cigarrillo",
+        "vape",
+        "tabaco"
+      ],
+      "a": "Los interiores son estrictamente libres de humo. Se puede fumar al aire libre en los patios y áreas de piscina."
+    },
+    {
+      "id": "quiet",
+      "q": "¿Podemos poner música? ¿Horas de silencio?",
+      "k": [
+        "musica",
+        "silencio",
+        "ruido",
+        "bocinas",
+        "fiesta"
+      ],
+      "a": "La música al aire libre es bienvenida durante el día. Las horas de silencio comienzan a las 8 PM entre semana y a las 10 PM los fines de semana, según las normas de San Juan."
+    },
+    {
+      "id": "restaurants",
+      "q": "¿Dónde comemos cerca?",
+      "k": [
+        "restaurante",
+        "comer",
+        "comida",
+        "cena",
+        "cafe",
+        "brunch"
+      ],
+      "a": "A poca distancia a pie: Kasalta (panadería cubana legendaria), El Hamburger, Pirilo Pizza y Acapulco Taquería. Para ocasiones especiales: 1919, Marmalade o Santaella, y nuestro concierge te reserva mesa."
+    },
+    {
+      "id": "groceries",
+      "q": "¿Pueden surtir la cocina antes de llegar?",
+      "k": [
+        "viveres",
+        "compra",
+        "supermercado",
+        "instacart",
+        "despensa"
+      ],
+      "a": "Sí. Envíanos tu lista al menos 48 horas antes de llegar y dejamos la cocina surtida (costo de la compra más un cargo de servicio). Instacart también entrega en el hotel."
+    },
+    {
+      "id": "beachgear",
+      "q": "¿Proveen equipo de playa?",
+      "k": [
+        "sillas",
+        "sombrilla",
+        "nevera",
+        "snorkel",
+        "toallas",
+        "equipo"
+      ],
+      "a": "Sillas de playa, sombrillas y una nevera portátil están incluidas. La playa está a 30 segundos del portón, y podemos conseguir equipo de snorkel y boogie boards a solicitud."
+    },
+    {
+      "id": "pets",
+      "q": "¿Aceptan mascotas?",
+      "k": [
+        "mascota",
+        "perro",
+        "gato",
+        "pet"
+      ],
+      "a": "Lo sentimos, por ahora no aceptamos mascotas. Estamos trabajando en una opción pet-friendly para el futuro."
+    },
+    {
+      "id": "checkin",
+      "q": "¿Horarios de check-in?",
+      "k": [
+        "check",
+        "entrada",
+        "salida",
+        "hora",
+        "llegada"
+      ],
+      "a": "El check-in es a las 4:00 PM y el check-out antes de las 10:00 AM. A veces es posible entrar antes o salir más tarde según la agenda, escríbenos y tratamos de acomodarte."
+    }
+  ],
+  "en": [
+    {
+      "id": "location",
+      "q": "Where is the hotel located?",
+      "k": [
+        "where",
+        "location",
+        "address",
+        "located",
+        "directions",
+        "far"
+      ],
+      "a": "We’re at 5 Calle Guerrero Noble, Ocean Park, San Juan, 00913, steps from Ocean Park Beach and minutes from Condado and Old San Juan.",
+      "link": [
+        "/contact",
+        "Get in touch"
+      ]
+    },
+    {
+      "id": "book",
+      "q": "How do I book?",
+      "k": [
+        "book",
+        "booking",
+        "reserve",
+        "price",
+        "rate",
+        "availability",
+        "cost"
+      ],
+      "a": "Book direct through our booking engine with no OTA fees. Prefer a human? Message us on WhatsApp and we’ll help personally.",
+      "link": [
+        "https://villaazurehotel.guestybookings.com/en",
+        "Book now"
+      ]
+    },
+    {
+      "id": "capacity",
+      "q": "How many guests can stay?",
+      "k": [
+        "guests",
+        "people",
+        "capacity",
+        "suites",
+        "rooms",
+        "group",
+        "sleep"
+      ],
+      "a": "The hotel has 16 en-suite designer suites, many with ocean views, sleeping up to 38 guests. Reserve one suite, several, or the entire hotel.",
+      "link": [
+        "/rooms",
+        "See the suites"
+      ]
+    },
+    {
+      "id": "chef",
+      "q": "Do you have a chef and concierge?",
+      "k": [
+        "chef",
+        "food",
+        "dinner",
+        "breakfast",
+        "concierge",
+        "cook",
+        "meals"
+      ],
+      "a": "Yes. Our private chef cooks everything from poolside breakfasts to oceanfront dinners, typically $85–$150 per person plus groceries depending on the menu. The concierge arranges tours, charters and transfers.",
+      "link": [
+        "/amenities",
+        "See amenities"
+      ]
+    },
+    {
+      "id": "weddings",
+      "q": "Can we host a wedding or event?",
+      "k": [
+        "wedding",
+        "event",
+        "marry",
+        "celebration",
+        "corporate",
+        "retreat",
+        "party"
+      ],
+      "a": "Absolutely. A full-hotel buyout gives you the oceanfront gardens, the terraces and all 16 suites for up to 38 overnight guests.",
+      "link": [
+        "/weddings",
+        "Explore weddings"
+      ]
+    },
+    {
+      "id": "amenities",
+      "q": "What amenities do you have?",
+      "k": [
+        "amenities",
+        "pool",
+        "beach",
+        "wifi",
+        "parking",
+        "kitchen"
+      ],
+      "a": "Two private pools, direct beach access, a BBQ terrace, chef’s kitchens, free WiFi and free on-site parking.",
+      "link": [
+        "/amenities",
+        "See everything"
+      ]
+    },
+    {
+      "id": "spa",
+      "q": "Is there a spa or massage?",
+      "k": [
+        "spa",
+        "massage",
+        "yoga",
+        "facial",
+        "wellness",
+        "treatment"
+      ],
+      "a": "No spa walls here. We bring it to you. Licensed therapists do massages and treatments in your suite or garden, and we arrange private beach yoga. Booked via the concierge, priced per service.",
+      "link": [
+        "/experiences",
+        "See experiences"
+      ]
+    },
+    {
+      "id": "kite",
+      "q": "Can I go kitesurfing?",
+      "k": [
+        "kite",
+        "kitesurf",
+        "surf",
+        "wind",
+        "watersports",
+        "lessons"
+      ],
+      "a": "Ocean Park is one of Puerto Rico’s best-known kite beaches, and the hotel sits right on it. Our concierge connects you with local schools for lessons and rentals.",
+      "link": [
+        "/kitesurfing",
+        "More on kitesurfing"
+      ]
+    },
+    {
+      "id": "beach",
+      "q": "Is the hotel right on the beach?",
+      "k": [
+        "beach",
+        "beachfront",
+        "sand",
+        "ocean",
+        "access"
+      ],
+      "a": "Yes. The hotel is beachfront in Ocean Park with direct beach access and two pools, just steps from the sand.",
+      "link": [
+        "/amenities",
+        "See amenities"
+      ]
+    },
+    {
+      "id": "views",
+      "q": "Do the suites have ocean views?",
+      "k": [
+        "view",
+        "views",
+        "balcony",
+        "ocean view"
+      ],
+      "a": "Many of the sixteen suites have ocean or pool views, including the Ocean View Queen Suite and the Grand Ocean View Suite, the hotel’s signature accommodation.",
+      "link": [
+        "/rooms",
+        "See the suites"
+      ]
+    },
+    {
+      "id": "nearby",
+      "q": "What is there to do nearby?",
+      "k": [
+        "nearby",
+        "around",
+        "attractions",
+        "things to do",
+        "visit",
+        "old san juan",
+        "condado"
+      ],
+      "a": "Ocean Park Beach is right out front; Old San Juan (UNESCO-recognized), the Condado Lagoon for kayaking, the Museo de Arte de Puerto Rico and the Distrito T-Mobile dining and nightlife district are all minutes away.",
+      "link": [
+        "/amenities#destinations",
+        "Nearby destinations"
+      ]
+    },
+    {
+      "id": "airport",
+      "q": "How far is the airport?",
+      "k": [
+        "airport",
+        "sju",
+        "transfer",
+        "transport",
+        "taxi",
+        "shuttle"
+      ],
+      "a": "Luis Muñoz Marín International Airport (SJU) is only about 10 minutes away by car. Uber works well for small groups, and we can arrange private drivers for bigger parties or late arrivals."
+    },
+    {
+      "id": "dining",
+      "q": "Is breakfast or dining included?",
+      "k": [
+        "breakfast",
+        "included",
+        "meal",
+        "restaurant",
+        "lunch",
+        "dinner"
+      ],
+      "a": "Meals aren’t included by default. Our in-house private chef prepares everything from breakfast to multi-course dinners on request, priced per service, and the suites include equipped kitchens if you’d rather cook.",
+      "link": [
+        "/amenities",
+        "See amenities"
+      ]
+    },
+    {
+      "id": "corporate",
+      "q": "Do you host corporate retreats?",
+      "k": [
+        "corporate",
+        "company",
+        "retreat",
+        "offsite",
+        "meeting",
+        "team"
+      ],
+      "a": "Yes. A full-hotel buyout gives your team oceanfront meeting spaces, sixteen suites for up to 38 people, an in-house chef and beach activities steps away.",
+      "link": [
+        "/corporate",
+        "See corporate"
+      ]
+    },
+    {
+      "id": "family",
+      "q": "Is it good for families and groups?",
+      "k": [
+        "family",
+        "kids",
+        "children",
+        "group",
+        "friends",
+        "connecting"
+      ],
+      "a": "Very. There are rooms with two King beds that are perfect for families, connecting rooms, two pools and gardens, and the whole hotel sleeps up to 38 guests.",
+      "link": [
+        "/rooms",
+        "See the suites"
+      ]
+    },
+    {
+      "id": "minstay",
+      "q": "Is there a minimum stay?",
+      "k": [
+        "minimum",
+        "min stay",
+        "nights",
+        "one night",
+        "weekend"
+      ],
+      "a": "Stays are typically a 5-night minimum. For shorter stays or specific dates, message us on WhatsApp and we’ll see what’s possible."
+    },
+    {
+      "id": "poolheat",
+      "q": "Is the pool heated?",
+      "k": [
+        "heated",
+        "pool temperature",
+        "warm",
+        "cold"
+      ],
+      "a": "Yes, the pool is heated and kept at a warm 86°F year-round."
+    },
+    {
+      "id": "ac",
+      "q": "Do the suites have air conditioning?",
+      "k": [
+        "air",
+        "conditioning",
+        "ac",
+        "a/c",
+        "fan",
+        "hot"
+      ],
+      "a": "Yes, every suite has its own air conditioning, and the main living areas have central air as well."
+    },
+    {
+      "id": "smoking",
+      "q": "Is smoking allowed?",
+      "k": [
+        "smoking",
+        "smoke",
+        "cigar",
+        "cigarette",
+        "vape"
+      ],
+      "a": "Interiors are strictly non-smoking. Smoking is welcome outdoors on the patios and pool areas."
+    },
+    {
+      "id": "quiet",
+      "q": "Can we play music? Quiet hours?",
+      "k": [
+        "music",
+        "quiet",
+        "noise",
+        "speakers",
+        "loud"
+      ],
+      "a": "Outdoor music is welcome during the day. Quiet hours start at 8 PM on weekdays and 10 PM on weekends, per San Juan norms."
+    },
+    {
+      "id": "restaurants",
+      "q": "Where should we eat nearby?",
+      "k": [
+        "restaurant",
+        "eat",
+        "food",
+        "dinner spots",
+        "cafe",
+        "brunch"
+      ],
+      "a": "Within walking distance: Kasalta (legendary Cuban bakery), El Hamburger, Pirilo Pizza and Acapulco Taquería. For special occasions try 1919, Marmalade or Santaella, and our concierge can book you a table."
+    },
+    {
+      "id": "groceries",
+      "q": "Can you stock groceries before we arrive?",
+      "k": [
+        "groceries",
+        "grocery",
+        "stock",
+        "instacart",
+        "supermarket",
+        "shopping"
+      ],
+      "a": "Yes. Send us your list at least 48 hours before arrival and we’ll have the kitchen stocked (grocery cost plus a service fee). Instacart also delivers to the hotel."
+    },
+    {
+      "id": "beachgear",
+      "q": "Do you provide beach equipment?",
+      "k": [
+        "beach chairs",
+        "umbrella",
+        "cooler",
+        "snorkel",
+        "towels",
+        "gear",
+        "equipment"
+      ],
+      "a": "Beach chairs, umbrellas and a cooler are included. The beach is a 30-second walk from the gate, and we can arrange snorkel gear and boogie boards on request."
+    },
+    {
+      "id": "pets",
+      "q": "Are pets allowed?",
+      "k": [
+        "pet",
+        "dog",
+        "cat",
+        "animal"
+      ],
+      "a": "Sorry, no pets at this time. We’re working on a pet-friendly option for the future."
+    },
+    {
+      "id": "checkin",
+      "q": "Check-in and check-out times?",
+      "k": [
+        "check",
+        "checkin",
+        "checkout",
+        "arrival",
+        "time",
+        "early",
+        "late"
+      ],
+      "a": "Check-in is at 4:00 PM and check-out is by 10:00 AM. Early check-in or late check-out is sometimes possible depending on the schedule, message us and we’ll try to make it work."
+    }
+  ]
+}

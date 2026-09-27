@@ -1,0 +1,16 @@
+name = "villa-azure-guesty-ga4"
+main = "src/worker.js"
+compatibility_date = "2026-05-01"
+
+# GA4 property: 537282737 (Villa Azure) — measurement ID set below.
+# api_secret + (optional) shared secret are set via `wrangler secret put`:
+#   wrangler secret put GA4_API_SECRET
+#   wrangler secret put GUESTY_SHARED_SECRET    # optional but recommended
+[vars]
+GA4_MEASUREMENT_ID = "G-ZDG73P27V6"
+
+# Dedupe store: records each confirmation code already sent to GA4 so channel
+# re-syncs / webhook retries / duplicate event types can't double-count a booking.
+[[kv_namespaces]]
+binding = "SENT_TX"
+id = "8b06d02cd1fd4ae29a00be1b033eaf41"
