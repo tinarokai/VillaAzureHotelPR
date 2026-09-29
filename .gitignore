@@ -31,3 +31,8 @@ dist-ssr
 *.sln
 *.sw?
 public/assets/video/
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
