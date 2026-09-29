@@ -1,7 +1,8 @@
 # Cloudflare Pages configuration for villaazurehotelpr.com.
 # The site is the static HTML in public/; functions/ holds the contact endpoint.
 #
-# Deploy:      wrangler pages deploy            (git push does NOT deploy)
+# Deploy:      git push to main (Cloudflare Pages builds and deploys it)
+#              manual fallback: wrangler pages deploy
 # DB schema:   wrangler d1 migrations apply villa-azure-contact --remote
 # Secret:      wrangler pages secret put EMAIL_API_TOKEN --project-name villa-azure-hotel
 #              (Cloudflare API token with Email Sending: Edit; already set)
