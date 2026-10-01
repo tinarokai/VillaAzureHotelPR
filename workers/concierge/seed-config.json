@@ -44,7 +44,7 @@
         "habitaciones",
         "grupo"
       ],
-      "a": "El hotel tiene 16 suites con baño privado, muchas con vista al mar, y aloja hasta 38 huéspedes. Puedes reservar una suite, varias, o el hotel completo.",
+      "a": "El hotel tiene 16 suites con baño privado, muchas con vista al mar, y aloja hasta 36 huéspedes. Puedes reservar una suite, varias, o el hotel completo.",
       "link": [
         "/es/rooms",
         "Ver las suites"
@@ -78,7 +78,7 @@
         "corporativo",
         "retiro"
       ],
-      "a": "Claro. Con renta completa del hotel tienes los jardines y terrazas frente al mar y las 16 suites para hasta 38 invitados que se hospedan.",
+      "a": "Claro. Con renta completa del hotel tienes los jardines y terrazas frente al mar y las 16 suites para hasta 36 invitados que se hospedan.",
       "link": [
         "/es/weddings",
         "Explorar bodas"
@@ -223,7 +223,7 @@
         "reunion",
         "equipo"
       ],
-      "a": "Sí. Con renta completa del hotel tu equipo tiene espacios de reunión frente al mar, dieciséis suites para hasta 38 personas, chef privado y actividades de playa a pasos.",
+      "a": "Sí. Con renta completa del hotel tu equipo tiene espacios de reunión frente al mar, dieciséis suites para hasta 36 personas, chef privado y actividades de playa a pasos.",
       "link": [
         "/es/corporate",
         "Ver corporativo"
@@ -239,7 +239,7 @@
         "amigos",
         "conectadas"
       ],
-      "a": "Sí. Hay habitaciones con dos camas King perfectas para familias, habitaciones conectadas, dos piscinas y jardines, y el hotel completo aloja hasta 38 huéspedes.",
+      "a": "Sí. Hay habitaciones con dos camas King perfectas para familias, habitaciones conectadas, dos piscinas y jardines, y el hotel completo aloja hasta 36 huéspedes.",
       "link": [
         "/es/rooms",
         "Ver las suites"
@@ -414,7 +414,7 @@
         "group",
         "sleep"
       ],
-      "a": "The hotel has 16 en-suite designer suites, many with ocean views, sleeping up to 38 guests. Reserve one suite, several, or the entire hotel.",
+      "a": "The hotel has 16 en-suite designer suites, many with ocean views, sleeping up to 36 guests. Reserve one suite, several, or the entire hotel.",
       "link": [
         "/rooms",
         "See the suites"
@@ -450,7 +450,7 @@
         "retreat",
         "party"
       ],
-      "a": "Absolutely. A full-hotel buyout gives you the oceanfront gardens, the terraces and all 16 suites for up to 38 overnight guests.",
+      "a": "Absolutely. A full-hotel buyout gives you the oceanfront gardens, the terraces and all 16 suites for up to 36 overnight guests.",
       "link": [
         "/weddings",
         "Explore weddings"
@@ -597,7 +597,7 @@
         "meeting",
         "team"
       ],
-      "a": "Yes. A full-hotel buyout gives your team oceanfront meeting spaces, sixteen suites for up to 38 people, an in-house chef and beach activities steps away.",
+      "a": "Yes. A full-hotel buyout gives your team oceanfront meeting spaces, sixteen suites for up to 36 people, an in-house chef and beach activities steps away.",
       "link": [
         "/corporate",
         "See corporate"
@@ -614,7 +614,7 @@
         "friends",
         "connecting"
       ],
-      "a": "Very. There are rooms with two King beds that are perfect for families, connecting rooms, two pools and gardens, and the whole hotel sleeps up to 38 guests.",
+      "a": "Very. There are rooms with two King beds that are perfect for families, connecting rooms, two pools and gardens, and the whole hotel sleeps up to 36 guests.",
       "link": [
         "/rooms",
         "See the suites"
